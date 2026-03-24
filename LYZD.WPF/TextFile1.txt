@@ -1,0 +1,27 @@
+主要需要写的文档
+1:数据库结构文档
+2:查询结构文档
+3:程序函数介绍
+4:程序类库介绍，流程介绍
+5:检定项目介绍
+
+
+设备控制：
+    功率源：返回值bool
+        升源：PowerOn(float Ua, float Ub, float Uc, float Ia, float Ib, float Ic, PowerYuanJian ele, PowerWay glfx, string glys)
+                                                                                  功率元件             功率方向        功率因素
+        关源：PowerOff()；
+
+    误差版： 没有表位号的就是重载，用多线程发送所需要检定表的命令
+        设置误差板标准常数:SetStandardConst()    返回值：bool和重载bool[]
+        设置误差板被检常数:SetTestedConst();     返回值：bool和重载bool[]
+        启动误差版:StartWcb();  返回值：bool
+        停止误差版:StopWcb     返回值：bool
+        读取误差板误差：ReadWcbData()            返回值：stError和重载stError[]
+
+    标准表：  
+        读取累计电量：ReadEnergy()    返回值：float[]
+        档位常数读取与设置：StdGear()   读取是ref返回，目前还未封装。。返回值bool
+        模式设置:stdMode()
+        启停标准表累积电能:startStdEnergy()
+        

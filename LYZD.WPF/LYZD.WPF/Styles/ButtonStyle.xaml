@@ -1,0 +1,447 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:controls="clr-namespace:LYZD.WPF.Controls">
+    <Style x:Key="ButtonFocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle Margin="2" SnapsToDevicePixels="true"
+                                       Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" 
+                                       StrokeThickness="1" StrokeDashArray="1 2"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <LinearGradientBrush x:Key="ButtonNormalBackground" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="#F3F3F3" Offset="0"/>
+        <GradientStop Color="#EBEBEB" Offset="0.5"/>
+        <GradientStop Color="#DDDDDD" Offset="0.5"/>
+        <GradientStop Color="#CDCDCD" Offset="1"/>
+    </LinearGradientBrush>
+
+
+    <Style x:Key="ButtonStyleBorder" 
+                                 TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+        <Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource 边框颜色}"/>
+        <Setter Property="Foreground"
+                        Value="{DynamicResource 字体颜色标准}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Foreground"
+                        Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate  TargetType="{x:Type Button}">
+                    <Border x:Name="Chrome" 
+                                                 SnapsToDevicePixels="true" 
+                                    BorderThickness="1">
+                        <Border.BorderBrush>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+                        </Border.BorderBrush>
+                        <Border.Background>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
+                        </Border.Background>
+                        <ContentPresenter 
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                                  Margin="1" 
+                                          Content="{TemplateBinding Content}"
+                                                  RecognizesAccessKey="True" 
+                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" 
+                                         Value="false">
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush   Color="{DynamicResource {x:Static SystemColors.InactiveBorderColorKey}}"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="Chrome"
+                                            Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="Chrome"
+                                            Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HotTrackColorKey}}"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SunButtonStyle" TargetType="{x:Type controls:BorderRadiusButton}">
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+        <Setter Property="Background" Value="#2ea400"/>
+        <Setter Property="Foreground"   Value="White"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" CornerRadius="{Binding Path=BorderRadius,RelativeSource={RelativeSource TemplatedParent}}"  Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <!--触发器：根据依赖属性的值去控制控件的状态-->
+                    <ControlTemplate.Triggers>
+                        <!--默认属性-->
+                        <!--<Trigger Property="IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                        </Trigger>-->
+                        <!--鼠标移入属性-->
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="#58b633"/>
+                        </Trigger>
+                        <!--鼠标按下属性-->
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="#258300"/>
+                        </Trigger>
+                        <!--按钮可用状态属性-->
+                        <!--
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                        </Trigger>-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource 边框颜色}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Foreground" Value="{DynamicResource 字体颜色标准}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="Chrome" SnapsToDevicePixels="true"    BorderThickness="0" 
+                            Background="{DynamicResource 窗口背景色}">
+                        <Border.BorderBrush>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+                        </Border.BorderBrush>
+                        <ContentPresenter 
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                    Margin="1"   
+                                    Content="{TemplateBinding Content}"
+                                    RecognizesAccessKey="True" 
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled"   Value="false">
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush  Color="{DynamicResource {x:Static SystemColors.InactiveBorderColorKey}}"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="Chrome"  Property="Background" Value="{DynamicResource 按钮选中颜色}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="Chrome" Property="BorderThickness" Value="1"/>
+                        </Trigger>
+       
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type Button}"
+           x:Key="StyleButtonMenu">
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource 边框颜色}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Foreground" Value="{DynamicResource 字体颜色标准}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="Chrome" 
+                                                 SnapsToDevicePixels="true" 
+                                    BorderThickness="0" 
+                            Background="{DynamicResource 窗口背景深色}">
+                        <Border.BorderBrush>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+                        </Border.BorderBrush>
+                        <ContentPresenter 
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                                  Margin="1" 
+                                                  RecognizesAccessKey="True" 
+                                          Content="{TemplateBinding Content}"
+                                                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="Chrome"
+                                            Property="Background"
+                                    Value="{DynamicResource 线性渐变颜色}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="Chrome"  Property="BorderThickness" Value="1"/>
+                            <Setter TargetName="Chrome" Property="Background" Value="{DynamicResource 窗口背景色}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled"   Value="false">
+                            <Setter TargetName="Chrome" Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush   Color="#FFB3CEDE"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="GlassButton" TargetType="{x:Type Button}">
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Background" Value="{DynamicResource 线性渐变颜色}"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource 边框颜色}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Foreground" Value="{DynamicResource 字体颜色标准}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <!-- Background Layer -->
+                        <Ellipse Fill="{TemplateBinding Background}"/>
+                        <!-- Refraction Layer -->
+                        <Ellipse x:Name="RefractionLayer">
+                            <Ellipse.Fill>
+                                <RadialGradientBrush GradientOrigin="0.496,1.052">
+                                    <RadialGradientBrush.RelativeTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.5" ScaleY="1.5"/>
+                                            <TranslateTransform X="0.02" Y="0.3"/>
+                                        </TransformGroup>
+                                    </RadialGradientBrush.RelativeTransform>
+                                    <GradientStop Offset="1" Color="#00000000"/>
+                                    <GradientStop Offset="0.4" Color="#FFFFFFFF"/>
+                                </RadialGradientBrush>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <!-- Reflection Layer -->
+                        <Path x:Name="ReflectionLayer" VerticalAlignment="Top" Stretch="Fill">
+                            <Path.RenderTransform>
+                                <ScaleTransform ScaleY="0.5" />
+                            </Path.RenderTransform>
+                            <Path.Data>
+                                <PathGeometry>
+                                    <PathFigure IsClosed="True" StartPoint="98.999,45.499">
+                                        <BezierSegment Point1="98.999,54.170" Point2="89.046,52.258" Point3="85.502,51.029"/>
+                                        <BezierSegment
+                                    IsSmoothJoin="True"
+                                    Point1="75.860,47.685"
+                                    Point2="69.111,45.196"
+                                    Point3="50.167,45.196"/>
+                                        <BezierSegment Point1="30.805,45.196" Point2="20.173,47.741" Point3="10.665,51.363"/>
+                                        <BezierSegment
+                                    IsSmoothJoin="True"
+                                    Point1="7.469,52.580"
+                                    Point2="1.000,53.252"
+                                    Point3="1.000,44.999"/>
+                                        <BezierSegment Point1="1.000,39.510" Point2="0.884,39.227" Point3="2.519,34.286"/>
+                                        <BezierSegment
+                                    IsSmoothJoin="True"
+                                    Point1="9.106,14.370"
+                                    Point2="27.875,0"
+                                    Point3="50,0"/>
+                                        <BezierSegment Point1="72.198,0" Point2="91.018,14.466" Point3="97.546,34.485"/>
+                                        <BezierSegment
+                                    IsSmoothJoin="True"
+                                    Point1="99.139,39.369"
+                                    Point2="98.999,40.084"
+                                    Point3="98.999,45.499"/>
+                                    </PathFigure>
+                                </PathGeometry>
+                            </Path.Data>
+                            <Path.Fill>
+                                <RadialGradientBrush GradientOrigin="0.498,0.526">
+                                    <RadialGradientBrush.RelativeTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform
+                                       CenterX="0.5"
+                                       CenterY="0.5"
+                                       ScaleX="1"
+                                       ScaleY="1.997"/>
+                                            <TranslateTransform X="0" Y="0.5"/>
+                                        </TransformGroup>
+                                    </RadialGradientBrush.RelativeTransform>
+                                    <GradientStop Offset="1" Color="#FFFFFFFF"/>
+                                    <GradientStop Offset="0.85" Color="#92FFFFFF"/>
+                                    <GradientStop Offset="0" Color="#00000000"/>
+                                </RadialGradientBrush>
+                            </Path.Fill>
+                        </Path>
+                        <!-- ContentPresenter -->
+                        <ContentPresenter Margin="0,2,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="RefractionLayer" Property="Fill">
+                                <Setter.Value>
+                                    <RadialGradientBrush GradientOrigin="0.496,1.052">
+                                        <RadialGradientBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform
+                                          CenterX="0.5"
+                                          CenterY="0.5"
+                                          ScaleX="1.5"
+                                          ScaleY="1.5"/>
+                                                <TranslateTransform X="0.02" Y="0.3"/>
+                                            </TransformGroup>
+                                        </RadialGradientBrush.RelativeTransform>
+                                        <GradientStop Offset="1" Color="#00000000"/>
+                                        <GradientStop Offset="0.45" Color="#FFFFFFFF"/>
+                                    </RadialGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="ReflectionLayer" Property="Fill">
+                                <Setter.Value>
+                                    <RadialGradientBrush GradientOrigin="0.498,0.526">
+                                        <RadialGradientBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform
+                                          CenterX="0.5"
+                                          CenterY="0.5"
+                                          ScaleX="1"
+                                          ScaleY="1.997"/>
+                                                <TranslateTransform X="0" Y="0.5"/>
+                                            </TransformGroup>
+                                        </RadialGradientBrush.RelativeTransform>
+                                        <GradientStop Offset="1" Color="#FFFFFFFF"/>
+                                        <GradientStop Offset="0.85" Color="#BBFFFFFF"/>
+                                        <GradientStop Offset="0" Color="#00000000"/>
+                                    </RadialGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="RefractionLayer" Property="Fill">
+                                <Setter.Value>
+                                    <RadialGradientBrush GradientOrigin="0.496,1.052">
+                                        <RadialGradientBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform
+                                          CenterX="0.5"
+                                          CenterY="0.5"
+                                          ScaleX="1.5"
+                                          ScaleY="1.5"/>
+                                                <TranslateTransform X="0.02" Y="0.3"/>
+                                            </TransformGroup>
+                                        </RadialGradientBrush.RelativeTransform>
+                                        <GradientStop Offset="1" Color="#00000000"/>
+                                        <GradientStop Offset="0.3" Color="#FFFFFFFF"/>
+                                    </RadialGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="ReflectionLayer" Property="Fill">
+                                <Setter.Value>
+                                    <RadialGradientBrush GradientOrigin="0.498,0.526">
+                                        <RadialGradientBrush.RelativeTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform
+                                          CenterX="0.5"
+                                          CenterY="0.5"
+                                          ScaleX="1"
+                                          ScaleY="1.997"/>
+                                                <TranslateTransform X="0" Y="0.5"/>
+                                            </TransformGroup>
+                                        </RadialGradientBrush.RelativeTransform>
+                                        <GradientStop Offset="1" Color="#CCFFFFFF"/>
+                                        <GradientStop Offset="0.85" Color="#66FFFFFF"/>
+                                        <GradientStop Offset="0" Color="#00000000"/>
+                                    </RadialGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="GlassButton2" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border CornerRadius="5" Background="{TemplateBinding Background}" Name="button" >
+                        <Grid>
+                            <Border BorderThickness="1,0,1,1" BorderBrush="Black" CornerRadius="{Binding ElementName=button, Path=CornerRadius}">
+                                <Border.Effect>
+                                    <BlurEffect Radius="2" KernelType="Gaussian"/>
+                                </Border.Effect>
+                            </Border>
+                            <Border BorderThickness="0,1,0,0" BorderBrush="White" Margin="2" Opacity="0.7" CornerRadius="{Binding ElementName=button, Path=CornerRadius}">
+                                <Border.Effect>
+                                    <BlurEffect Radius="2" KernelType="Gaussian"/>
+                                </Border.Effect>
+                            </Border>
+                            <ContentPresenter TextBlock.FontSize="{TemplateBinding FontSize}" TextBlock.FontFamily="{TemplateBinding FontFamily}" TextBlock.Foreground="{TemplateBinding Foreground}" VerticalAlignment="Center" HorizontalAlignment="Center" Content="{TemplateBinding Content}"></ContentPresenter>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="button" Property="Background"   Value="#002060"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="button"  Property="BorderThickness" Value="1"/>
+                            <Setter TargetName="button" Property="Background" Value="{DynamicResource 窗口背景色}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled"   Value="false">
+                            <Setter TargetName="button" Property="Background">
+                                <Setter.Value>
+                                    <SolidColorBrush   Color="#FFB3CEDE"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background" Value="#0020A0" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontFamily" Value="Consolas" />
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="60"/>
+    </Style>
+</ResourceDictionary>

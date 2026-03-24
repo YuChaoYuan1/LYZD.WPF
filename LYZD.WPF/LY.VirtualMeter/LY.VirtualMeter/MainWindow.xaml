@@ -1,0 +1,82 @@
+﻿<Window x:Class="LY.VirtualMeter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LY.VirtualMeter" xmlns:local1="clr-namespace:LY.VirtualMeter.Assets.Controls"
+        mc:Ignorable="d"
+        Title="模拟表应用程序" Height="542" Width="919"
+        WindowStyle="None"  AllowsTransparency="True" ResizeMode="CanResizeWithGrip"  WindowStartupLocation="CenterScreen"
+        MinWidth="620" MinHeight="500" >
+    <Grid >
+        <Grid.Background>
+            <RadialGradientBrush Center="0.5,0.7" GradientOrigin="0.5,0.7" RadiusY="0.8" RadiusX="0.8">
+                <GradientStop Color="#FF302C5D" Offset="0.952"/>
+                <GradientStop Color="#FF173980" Offset="0.102"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+
+        <Grid.RowDefinitions >
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Border Height="60" Background="Transparent" BorderBrush="#FF6800" BorderThickness="0,0,0,1" Margin="10,0"    MouseMove="Window_MouseMove"   MouseLeftButtonDown="Border_MouseLeftButtonDown" >
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 0">
+                    <local1:RadioImageButton Image="./Assets/Images/png-1427.png" Content="电表信息" ImageHeight="30" ImageWidth="30" 
+                                    Width="100" Height="50" IsChecked="True"  CommandParameter="LY.VirtualMeter.View.电表信息界面"  Command="{Binding TabChangeCommand}"/>
+                    <local1:RadioImageButton Image="./Assets/Images/png-1431.png" Content="终端报文" ImageHeight="30" ImageWidth="30" 
+                                    Width="100" Height="50"  CommandParameter="LY.VirtualMeter.View.终端报文界面"  Command="{Binding TabChangeCommand}"       />
+                    <local1:RadioImageButton Image="./Assets/Images/png-0216.png" Content="主程序报文" ImageHeight="30" ImageWidth="30" 
+                                    Width="100" Height="50"   CommandParameter="LY.VirtualMeter.View.主程序报文界面"  Command="{Binding TabChangeCommand}"/>
+                    <local1:RadioImageButton Image="./Assets/Images/png-0280.png" Content="表位设置" ImageHeight="30" ImageWidth="30" 
+                                    Width="100" Height="50"    CommandParameter="LY.VirtualMeter.View.设置界面"  Command="{Binding TabChangeCommand}"/>
+                </StackPanel>
+            </Border>
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right"  VerticalAlignment="Top"        Border.MouseLeftButtonDown="StackPanel_MouseLeftButtonDown">
+                <StackPanel.Resources>
+                    <Style TargetType="Border">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="White"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                    <Style TargetType="Border"   x:Key="StyleBorderClose">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Red"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </StackPanel.Resources>
+                <Border Margin="3,5">
+                    <Image Width="24"  Name="imageTopping"  VerticalAlignment="Top"   Source="./Assets/Images/钉子2.png"  />
+                </Border>
+                <Border Margin="3,5">
+                    <Image Width="24"  Name="imageMin"  VerticalAlignment="Top"   Source="./Assets/Images/Min.png"  />
+                </Border>
+                <Border Margin="3,5">
+                    <Image Width="24"  Name="imageMax"  VerticalAlignment="Top"   Source="./Assets/Images/Max.png" />
+                </Border>
+                <Border Style="{StaticResource StyleBorderClose}"   Margin="3,5" >
+                    <Image Width="24"  Name="imageClose"  VerticalAlignment="Top"  Source="/Assets/Images/Close.png"  />
+                </Border>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment ="Left" VerticalAlignment ="Top">
+                <Border Margin="3,5">
+                    <Image Width="24"  VerticalAlignment="Top"   Source="./Assets/Images/智能电表.png" />
+                </Border>
+                <TextBlock Text="模拟表" Foreground="White" VerticalAlignment="Center"  FontSize="16"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row=" 1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="620*"/>
+                <ColumnDefinition Width="299*"/>
+            </Grid.ColumnDefinitions>
+            <ContentControl  Content="{Binding MainContent}" Grid.ColumnSpan="2" Margin="0,0,0.2,0.4" />
+        </Grid>
+    </Grid>
+</Window>

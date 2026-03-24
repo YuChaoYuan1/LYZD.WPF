@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="LY.VirtualMeter.View.主程序报文界面"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LY.VirtualMeter.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid >
+        <TextBox Margin="5" Text="{Binding Log_PC,Mode=TwoWay}" TextChanged="TextBox_TextChanged" Name="textbox1" 
+                 ScrollViewer.HorizontalScrollBarVisibility="Auto"  ScrollViewer.VerticalScrollBarVisibility="Auto" AcceptsReturn="True"
+                 Background="Transparent"  Foreground="White" CaretBrush="White" FontSize="15"
+                 >
+            <TextBox.ContextMenu>
+                <ContextMenu MenuItem.Click="Click_IsChecked">
+                    <MenuItem x:Name="textClera" Header="清空数据"/>
+                </ContextMenu>
+            </TextBox.ContextMenu>
+        </TextBox>
+        <Button  Width="100" Height="100"  Click="Button_Click" Visibility="Collapsed"/>
+    </Grid>
+</UserControl>

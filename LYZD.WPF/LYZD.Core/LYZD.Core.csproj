@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{830309E8-432D-437A-9F3E-D7A8925D09B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LYZD.Core</RootNamespace>
+    <AssemblyName>LYZD.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataBase\clsWcLimitDataControl.cs" />
+    <Compile Include="DataBase\CreateMdb.cs" />
+    <Compile Include="Enum\CommMode.cs" />
+    <Compile Include="Enum\Cus_CheckStaute.cs" />
+    <Compile Include="Enum\Cus_CostControlItem.cs" />
+    <Compile Include="Enum\Cus_DgnItem.cs" />
+    <Compile Include="Enum\Cus_EmChannelType.cs" />
+    <Compile Include="Enum\Cus_EncryptionTrialType.cs" />
+    <Compile Include="Enum\Cus_FeiLv.cs" />
+    <Compile Include="Enum\Cus_PowerPhase.cs" />
+    <Compile Include="Enum\Cus_UpdateKeyType.cs" />
+    <Compile Include="Enum\Cus_Ywg.cs" />
+    <Compile Include="Enum\Cus_ZouZiMethod.cs" />
+    <Compile Include="Enum\EnumTerimalDataType.cs" />
+    <Compile Include="Enum\ItemResoultkeyword.cs" />
+    <Compile Include="Enum\Meter_State.cs" />
+    <Compile Include="Enum\PowerWay.cs" />
+    <Compile Include="Enum\Cus_PowerYuanJian.cs" />
+    <Compile Include="Enum\ProjectID.cs" />
+    <Compile Include="Enum\StandarMeterInfo.cs" />
+    <Compile Include="Enum\TerminalProtocolTypeEnum.cs" />
+    <Compile Include="Enum\UniversityMeterID.cs" />
+    <Compile Include="Enum\WireMode.cs" />
+    <Compile Include="Function\ArrayConvert.cs" />
+    <Compile Include="Function\Common.cs" />
+    <Compile Include="Function\CopyClassHelper.cs" />
+    <Compile Include="Function\DateTimes.cs" />
+    <Compile Include="Function\File.cs" />
+    <Compile Include="Function\MethodExpand.cs" />
+    <Compile Include="Function\Number.cs" />
+    <Compile Include="Function\QiDQianDFunction.cs" />
+    <Compile Include="Function\UsefulMethods.cs" />
+    <Compile Include="Helper\Const.cs" />
+    <Compile Include="Model\DnbModel\DnbInfo\ItemData.cs" />
+    <Compile Include="Model\DnbModel\DnbInfo\MeterDgn.cs" />
+    <Compile Include="Model\DnbModel\DnbInfo\MeterDLTData.cs" />
+    <Compile Include="Model\DnbModel\DnbInfo\MeterErrAccord.cs" />
+    <Compile Include="Model\DnbModel\DnbInfo\MeterErrAccordBase.cs" />
+    <Compile Include="Model\DnbModel\DnbInfo\MeterError.cs" />
+    <Compile Include="Model\DnbModel\DnbInfo\MeterBase.cs" />
+    <Compile Include="Model\DnbModel\DnbInfo\MeterFK.cs" />
+    <Compile Include="Model\DnbModel\DnbInfo\MeterQdQid.cs" />
+    <Compile Include="Model\DnbModel\DnbInfo\MeterResoultData.cs" />
+    <Compile Include="Model\DnbModel\DnbInfo\MeterResult.cs" />
+    <Compile Include="Model\DnbModel\DnbInfo\MeterZZError.cs" />
+    <Compile Include="Model\Meter\TestMeterInfo.cs" />
+    <Compile Include="Model\Schema\SchemaNode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Struct\ErrorLimit.cs" />
+    <Compile Include="Struct\MeterPrepare.cs" />
+    <Compile Include="Struct\MeterState.cs" />
+    <Compile Include="Struct\StIdentityInfo.cs" />
+    <Compile Include="Struct\StKeyInfo.cs" />
+    <Compile Include="Struct\StPlan_ConnProtocol.cs" />
+    <Compile Include="Struct\StPlan_QianDong.cs" />
+    <Compile Include="Struct\StPlan_QiDong.cs" />
+    <Compile Include="Struct\StPlan_WcPoint.cs" />
+    <Compile Include="Struct\StPlan_ZouZi.cs" />
+    <Compile Include="Struct\StTime.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZH.MeterProtocol\ZH.MeterProtocol.csproj">
+      <Project>{D2741FCF-183D-4581-AFE8-2DF869B4246A}</Project>
+      <Name>ZH.MeterProtocol</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

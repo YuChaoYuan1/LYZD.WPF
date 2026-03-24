@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB39CC18-6171-487E-BE1D-AB1B4C927A1E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LYZD.Verify</RootNamespace>
+    <AssemblyName>LYZD.Verify</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Resource\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AAPrepareTest\Inspection.cs" />
+    <Compile Include="AAPrepareTest\PowerOnControlCheckAddress.cs" />
+    <Compile Include="AAPrepareTest\SetTerminalIP.cs" />
+    <Compile Include="AAPrepareTest\SetTerminalIP_376.cs" />
+    <Compile Include="AccurateMeasurementTest\BaseActivePowerError.cs" />
+    <Compile Include="AccurateMeasurementTest\BaseActivePowerError_376.cs" />
+    <Compile Include="AccurateMeasurementTest\BaseCurrentError.cs" />
+    <Compile Include="AccurateMeasurementTest\BaseCurrentError_376.cs" />
+    <Compile Include="AccurateMeasurementTest\BaseCurrentLmbalError.cs" />
+    <Compile Include="AccurateMeasurementTest\BaseFreqqencyError.cs" />
+    <Compile Include="AccurateMeasurementTest\BaseHarmonicError.cs" />
+    <Compile Include="AccurateMeasurementTest\BaseNormalTemperatureError.cs" />
+    <Compile Include="AccurateMeasurementTest\BasePowerFactorError.cs" />
+    <Compile Include="AccurateMeasurementTest\BasePowerFactorErrorNew.cs" />
+    <Compile Include="AccurateMeasurementTest\BasePowerFactorError_376.cs" />
+    <Compile Include="AccurateMeasurementTest\BasePowerImpactError.cs" />
+    <Compile Include="AccurateMeasurementTest\BaseReactivePowerError.cs" />
+    <Compile Include="AccurateMeasurementTest\BaseReactivePowerError_376.cs" />
+    <Compile Include="AccurateMeasurementTest\BaseVoltageError.cs" />
+    <Compile Include="AccurateMeasurementTest\BaseVoltageError_376.cs" />
+    <Compile Include="AccurateMeasurementTest\Excessive.cs" />
+    <Compile Include="AccurateMeasurementTest\PowerConsume.cs" />
+    <Compile Include="AccurateMeasurementTest\PowerFactorOver.cs" />
+    <Compile Include="AccurateTest\BasicError.cs" />
+    <Compile Include="AccurateTest\ClockError.cs" />
+    <Compile Include="AccurateTest\ConstantVerify2.cs" />
+    <Compile Include="AccurateTest\Creep2.cs" />
+    <Compile Include="AccurateTest\ErrorAccord.cs" />
+    <Compile Include="AccurateTest\ErrorVarietyErr.cs" />
+    <Compile Include="AccurateTest\InitialError.cs" />
+    <Compile Include="AccurateTest\LoadCurrentUpAndDown.cs" />
+    <Compile Include="AccurateTest\MaxDemand.cs" />
+    <Compile Include="AccurateTest\Register.cs" />
+    <Compile Include="AccurateTest\Starts.cs" />
+    <Compile Include="ControlTest\BusinessStop.cs" />
+    <Compile Include="ControlTest\BusinessStop_376.cs" />
+    <Compile Include="ControlTest\BuyEnergyControl.cs" />
+    <Compile Include="ControlTest\BuyEnergyControl_376.cs" />
+    <Compile Include="ControlTest\EliminateFunction.cs" />
+    <Compile Include="ControlTest\EliminateFunction_376.cs" />
+    <Compile Include="ControlTest\EnergyControl.cs" />
+    <Compile Include="ControlTest\EnergyControl_376.cs" />
+    <Compile Include="ControlTest\FactoryHolidayControl.cs" />
+    <Compile Include="ControlTest\FactoryHolidayControl_376.cs" />
+    <Compile Include="ControlTest\PowerDownControl.cs" />
+    <Compile Include="ControlTest\PowerDownControl_376.cs" />
+    <Compile Include="ControlTest\ProtectEnergyFunction.cs" />
+    <Compile Include="ControlTest\ProtectEnergyFunction_376.cs" />
+    <Compile Include="ControlTest\ReminderFeeWarnning.cs" />
+    <Compile Include="ControlTest\ReminderFeeWarnning_376.cs" />
+    <Compile Include="ControlTest\RemoteControlFunction.cs" />
+    <Compile Include="ControlTest\RemoteControlFunction_376.cs" />
+    <Compile Include="ControlTest\TimePeriodControl.cs" />
+    <Compile Include="ControlTest\TimePeriodControl_376.cs" />
+    <Compile Include="DataCollect\Energy645Current.cs" />
+    <Compile Include="DataCollect\EnergyCollection.cs" />
+    <Compile Include="DataCollect\EnergyCollection_376.cs" />
+    <Compile Include="DataCollect\EnergyCurrent.cs" />
+    <Compile Include="DataCollect\EnergyCurrent02.cs" />
+    <Compile Include="DataCollect\EnergyCurrentErrMac.cs" />
+    <Compile Include="DataCollect\EnergyRealData.cs" />
+    <Compile Include="DataCollect\GroupTotalDataCollection.cs" />
+    <Compile Include="DataCollect\GroupTotalDataCollection_376.cs" />
+    <Compile Include="DataCollect\GroupTotalDataRead.cs" />
+    <Compile Include="DataCollect\HPLCarrierCommunication.cs" />
+    <Compile Include="DataCollect\PeriodStorage.cs" />
+    <Compile Include="DataCollect\PeriodStorage_376.cs" />
+    <Compile Include="DataCollect\PulseCollection120Unitmin.cs" />
+    <Compile Include="DataCollect\PulseCollection120Unitmin_376.cs" />
+    <Compile Include="DataCollect\PulseCollection12Unitmin.cs" />
+    <Compile Include="DataCollect\PulseCollection12Unitmin_376.cs" />
+    <Compile Include="DataCollect\StatusCollection.cs" />
+    <Compile Include="DataCollect\StatusCollection_376.cs" />
+    <Compile Include="DataHandling\CheckDayForez.cs" />
+    <Compile Include="DataHandling\CurveData.cs" />
+    <Compile Include="DataHandling\CurveData_376.cs" />
+    <Compile Include="DataHandling\GroupReadMeter.cs" />
+    <Compile Include="DataHandling\HistoricalDailyData.cs" />
+    <Compile Include="DataHandling\HistoricalDailyData_376.cs" />
+    <Compile Include="DataHandling\HistoricalMonthlyData.cs" />
+    <Compile Include="DataHandling\HistoricalMonthlyData_376.cs" />
+    <Compile Include="DataHandling\ProactReporting.cs" />
+    <Compile Include="DataHandling\RandomSampling.cs" />
+    <Compile Include="DataHandling\ReadMacCheck.cs" />
+    <Compile Include="DataHandling\ReadMeterMacCheck.cs" />
+    <Compile Include="DataHandling\RealData.cs" />
+    <Compile Include="DataHandling\RealData_376.cs" />
+    <Compile Include="DataHandling\SupplementaryCurveData.cs" />
+    <Compile Include="DataHandling\SupplementaryHistoricalDailyData.cs" />
+    <Compile Include="DataHandling\SupplementaryMeterEvent.cs" />
+    <Compile Include="DataHandling\TransparentScheme.cs" />
+    <Compile Include="DataHandling\VoltQualified.cs" />
+    <Compile Include="EventRecord\BuyEnergyParameterChanged.cs" />
+    <Compile Include="EventRecord\BuyEnergyParameterChanged_376.cs" />
+    <Compile Include="EventRecord\CurrentOverFlow_376.cs" />
+    <Compile Include="EventRecord\MagneticAnomalyEvent_376.cs" />
+    <Compile Include="EventRecord\MeterButtonBoxOpened_376.cs" />
+    <Compile Include="EventRecord\MeterConstChanged_376.cs" />
+    <Compile Include="EventRecord\MeterCoverOpened_376.cs" />
+    <Compile Include="EventRecord\MeterCutOfPhase_376.cs" />
+    <Compile Include="EventRecord\MeterDemandCleared_376.cs" />
+    <Compile Include="EventRecord\MeterDropIn.cs" />
+    <Compile Include="EventRecord\MeterDropIn_376.cs" />
+    <Compile Include="EventRecord\MeterErr.cs" />
+    <Compile Include="EventRecord\MeterErr_376.cs" />
+    <Compile Include="EventRecord\MeterFly.cs" />
+    <Compile Include="EventRecord\MeterFly_376.cs" />
+    <Compile Include="EventRecord\MeterMonitorEvent.cs" />
+    <Compile Include="EventRecord\MeterProgamingTimesChanged_376.cs" />
+    <Compile Include="EventRecord\MeterReadDateChanged_376.cs" />
+    <Compile Include="EventRecord\MeterStop.cs" />
+    <Compile Include="EventRecord\MeterStop_376.cs" />
+    <Compile Include="EventRecord\MeterTimeError.cs" />
+    <Compile Include="EventRecord\MeterTimeError_376.cs" />
+    <Compile Include="EventRecord\MeterTimePeriodChanged_376.cs" />
+    <Compile Include="EventRecord\MeterUndervoltage_376.cs" />
+    <Compile Include="EventRecord\ReadMeterFai.cs" />
+    <Compile Include="EventRecord\ReadMeterFail2.cs" />
+    <Compile Include="EventRecord\ReadMeterFail_376.cs" />
+    <Compile Include="EventRecord\RunStatusChange_376.cs" />
+    <Compile Include="EventRecord\TerminalActivelyReports.cs" />
+    <Compile Include="EventRecord\TerminalCurrentReversed_376.cs" />
+    <Compile Include="EventRecord\TerminalImbalance_376.cs" />
+    <Compile Include="EventRecord\TerminalParameterChanged_376.cs" />
+    <Compile Include="EventRecord\TerminalPowerOnAndOff.cs" />
+    <Compile Include="EventRecord\TerminalPowerOnAndOffReport_376.cs" />
+    <Compile Include="EventRecord\TerminalPowerOnAndOff_376.cs" />
+    <Compile Include="EventRecord\TerminalSetTimeEvent.cs" />
+    <Compile Include="EventRecord\TerminalSetTimeEvent_376.cs" />
+    <Compile Include="EventRecord\TerminalVoltageReversed.cs" />
+    <Compile Include="EventRecord\TerminalVoltageReversed_376.cs" />
+    <Compile Include="EventRecord\TerProGramEvent.cs" />
+    <Compile Include="EventRecord\ViewPowerOverFlow_376.cs" />
+    <Compile Include="EventRecord\VoltageCutOfPhase_376.cs" />
+    <Compile Include="EventRecord\VoltageLossOfPhase_376.cs" />
+    <Compile Include="EventRecord\VoltageOverflow_376.cs" />
+    <Compile Include="EventRecord\WholeEventRecord.cs" />
+    <Compile Include="HPLCDeepening\FactoryReset.cs" />
+    <Compile Include="HPLCDeepening\Highfrequencydata.cs" />
+    <Compile Include="HPLCDeepening\SatelliteTime.cs" />
+    <Compile Include="IdentityAndKeyAgreement\KeyDownload.cs" />
+    <Compile Include="AccurateTest\Influences.cs" />
+    <Compile Include="IdentityAndKeyAgreement\KeyDownload_376.cs" />
+    <Compile Include="IdentityAndKeyAgreement\KeyRecovery.cs" />
+    <Compile Include="IdentityAndKeyAgreement\KeyRecovery_376.cs" />
+    <Compile Include="ParameterSetAndSelect\EventParameter.cs" />
+    <Compile Include="ParameterSetAndSelect\MeterCheckTime.cs" />
+    <Compile Include="ParameterSetAndSelect\MeterReadingParameters.cs" />
+    <Compile Include="ParameterSetAndSelect\MeterReadingParameters_376.cs" />
+    <Compile Include="ParameterSetAndSelect\OneMeterRead.cs" />
+    <Compile Include="ParameterSetAndSelect\OtherParameters_376.cs" />
+    <Compile Include="ParameterSetAndSelect\ParameterOfControl_376.cs" />
+    <Compile Include="ParameterSetAndSelect\ParameterOfThreshold_376.cs" />
+    <Compile Include="ParameterSetAndSelect\ParameterSetAndInfo.cs" />
+    <Compile Include="ParameterSetAndSelect\ProactivelyReporting.cs" />
+    <Compile Include="ParameterSetAndSelect\ReadAddress.cs" />
+    <Compile Include="ParameterSetAndSelect\ReadAddress_376.cs" />
+    <Compile Include="ParameterSetAndSelect\ReadSetTime.cs" />
+    <Compile Include="ParameterSetAndSelect\ReadSetTime_376.cs" />
+    <Compile Include="ParameterSetAndSelect\ReadTerInfo.cs" />
+    <Compile Include="ParameterSetAndSelect\TerminalParameters.cs" />
+    <Compile Include="ParameterSetAndSelect\TerminalParameters_376.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaskReporting\TimingOneData_376.cs" />
+    <Compile Include="TaskReporting\TimingTwoData_376.cs" />
+    <Compile Include="TerminalMaintain\JiaoCaiClear.cs" />
+    <Compile Include="TerminalMaintain\SafeModel.cs" />
+    <Compile Include="TerminalMaintain\TerminalMaintain.cs" />
+    <Compile Include="TerminalMaintain\TerminalMaintain_376.cs" />
+    <Compile Include="Test.cs" />
+    <Compile Include="ZZTestOkSet\RecoveryTerminalIP.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LYZD.Core\LYZD.Core.csproj">
+      <Project>{830309e8-432d-437a-9f3e-d7a8925d09b8}</Project>
+      <Name>LYZD.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LYZD.Mis\LYZD.Mis.csproj">
+      <Project>{92B1BD49-4868-4D88-B188-30F992E339E2}</Project>
+      <Name>LYZD.Mis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LYZD.TerminalProtocol\LYZD.TerminalProtocol.csproj">
+      <Project>{2B05E7BF-F5A5-4C3D-BB92-30D3682A2B53}</Project>
+      <Name>LYZD.TerminalProtocol</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LYZD.ViewModel\LYZD.ViewModel.csproj">
+      <Project>{9cb85f14-7126-4f14-98ea-f295f604e346}</Project>
+      <Name>LYZD.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZH.MeterProtocol\ZH.MeterProtocol.csproj">
+      <Project>{D2741FCF-183D-4581-AFE8-2DF869B4246A}</Project>
+      <Name>ZH.MeterProtocol</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlTest\BuyEnergyTimePeriodBothIn.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,2166 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ServiceInterface</name>
+    </assembly>
+    <members>
+        <member name="T:ServiceInterface.DataFormat.ApiResult`1">
+             <summary>
+            API请求结果
+             </summary>
+             <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.ApiResult`1.Data">
+            <summary>
+            请求结果数据
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.BaseFormat.ApiTestInfo`1">
+            <summary>
+            Api测试信息
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.BaseFormat.ApiTestInfo`1.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.BaseFormat.ApiTestInfo`1.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.BaseFormat.LoginApiInfo">
+            <summary>
+            API登入
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.BaseFormat.LoginApiInfo.Name">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.BaseFormat.LoginApiInfo.PassWord">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.BaseFormat.LoginApiInfo.Grade">
+            <summary>
+            权限
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.BaseFormat.UserInfoData">
+            <summary>
+            用户信息表
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BaseFormat.UserInfoData.USER_NAME">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BaseFormat.UserInfoData.USER_PASS_WORD">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BaseFormat.UserInfoData.USER_POWER">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BaseFormat.UserInfoData.LAST_LOGIN_TIME">
+            <summary>
+            最近登入时间
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BaseFormat.UserInfoData.LOGIN_COUNT">
+            <summary>
+            登入次数
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BaseFormat.UserInfoData.LAST_ERROR_INFO">
+            <summary>
+            登入异常信息
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.BoxFormat.BoxAndMeterCheckFormat">
+            <summary>
+            箱表验证格式
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BoxFormat.BoxAndMeterCheckFormat.TaskNo">
+            <summary>
+            任务编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BoxFormat.BoxAndMeterCheckFormat.MeterBar">
+            <summary>
+            表条码集合
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BoxFormat.BoxAndMeterCheckFormat.BoxNo">
+            <summary>
+            箱号
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.BoxFormat.BoxInfo">
+            <summary>
+            箱子信息
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BoxFormat.BoxInfo.BOX_NO">
+            <summary>
+            箱子编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BoxFormat.BoxInfo.RESULT">
+             <summary>
+            结论类型-0未写入，1合格,待校验，2不合格待报废，3待维修，4待赔付
+             </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BoxFormat.BoxInfo.BOX_TYPE">
+            <summary>
+            箱子类型 单相，三相 
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BoxFormat.BoxInfo.METER_BARS">
+            <summary>
+            箱子内表条码集合
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BoxFormat.BoxInfo.TASK_NO">
+            <summary>
+            任务编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BoxFormat.BoxInfo.BOX_STATE">
+            <summary>
+            箱子状态
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BoxFormat.BoxInfo.BING_TIME">
+            <summary>
+            绑定时间
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BoxFormat.BoxInfo.BING_TYPE">
+            <summary>
+            绑定类型-出库绑定1，回库绑定2
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.BoxFormat.BoxInfo.RETURN_TIME">
+            <summary>
+            回库时间
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.CacheFormat.CacheInfo">
+            <summary>
+            缓存信息
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.CacheFormat.CacheInfo.DEVICE_NO">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.CacheFormat.CacheInfo.DEVICE_TYPE">
+            <summary>
+            设备类型
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.CacheFormat.CacheInfo.DEVICE_STATE">
+            <summary>
+            设备状态
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.CacheFormat.CacheInfo.DEVICE_DATA">
+            <summary>
+            设备数据
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.CacheFormat.CacheInfo.TASK_NO">
+            <summary>
+            任务编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.CacheFormat.CacheInfo.RESULT_TYPE">
+            <summary>
+            结论类型
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.CacheFormat.CacheInfo.WRITE_TIME">
+            <summary>
+            写入时间 yyyy-MM-dd HH:mm:ss格式
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.CallResult">
+            <summary>
+            调用结果
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.CallResult.ResultFlag">
+            <summary>
+            调用结果标志
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.CallResult.ErrorMessage">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.DataHelper">
+            <summary>
+            数据帮助类
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataFormat.DataHelper.GetMD5(System.Byte[])">
+            <summary>
+            获取文件数据的MD5值
+            </summary>
+            <param name="fileData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.DataStatisticsFormat.DataSelectFormat">
+            <summary>
+            查询统计数据条件格式
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.DataStatisticsFormat.DataSelectFormat.StateTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.DataStatisticsFormat.DataSelectFormat.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.DataStatisticsFormat.DataSelectFormat.TaskNo">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.DataStatisticsFormat.DataSelectFormat.IsTiemSelect">
+            <summary>
+            是否用时间搜索
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.DataStatisticsFormat.DataSelectFormat.MeterStart">
+            <summary>
+            表当前的状态
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.DataStatisticsFormat.DaySelectFormat">
+            <summary>
+            日数据统计查询格式
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.DataStatisticsFormat.DaySelectFormat.SettlementTime">
+            <summary>
+            每日结算时间0-23，单位小时
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.DataStatisticsFormat.DaySelectFormat.DayCount">
+            <summary>
+            查询多少天的数据
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.DataStatisticsFormat.SelectMteterResultData">
+            <summary>
+            查询表的结论数据
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.DataStatisticsFormat.SelectMteterResultData.Yes">
+            <summary>
+            合格数量
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.DataStatisticsFormat.SelectMteterResultData.No">
+             <summary>
+            不合格数量
+             </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.FileFormat.FileData">
+            <summary>
+            文件信息
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.FileFormat.FileData.TaskNo">
+            <summary>
+            任务编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.FileFormat.FileData.BarCode">
+            <summary>
+            表位条形码
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.FileFormat.FileData.AreaNmae">
+            <summary>
+            识别区域名称
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.FileFormat.FileData.FileStream">
+            <summary>
+            文件流数据
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.FileFormat.FileData.MD5">
+            <summary>
+            文件流的MD5值
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.FileFormat.FileData.Time">
+            <summary>
+            存储时间
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.GraveFormat.Seal_Adopt_Info">
+            <summary>
+            施封控制信息
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.GraveFormat.Seal_Adopt_Info.GRAVE_PRELUDE">
+            <summary>
+            雕刻首部
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.GraveFormat.Seal_Adopt_Info.GRAVE_TAIL">
+            <summary>
+            雕刻尾部
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.GraveFormat.Seal_Adopt_Info.GRAVE_START_VALUE">
+            <summary>
+            起始值
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.GraveFormat.Seal_Adopt_Info.GRAVE_END_VALUE">
+            <summary>
+            结束值
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.GraveFormat.Seal_Adopt_Info.GRAVE_NO">
+            <summary>
+            正在使用的雕刻号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.GraveFormat.Seal_Adopt_Info.GRAVE_STATE">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.GraveFormat.Seal_Adopt_Info.GRAVE_FORMAT">
+            <summary>
+            格式
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.GraveFormat.Seal_Adopt_Info.GRAVE_TASK_NO">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.GraveFormat.Seal_Adopt_Info.GRAVE_GET_COUNT">
+            <summary>
+            获取雕刻号数量
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.GraveFormat.Seal_Info">
+            <summary>
+            施封内容信息表
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.GraveFormat.Seal_Info.TASK_NO">
+            <summary>
+            任务编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.GraveFormat.Seal_Info.METER_BAR">
+            <summary>
+            表条码
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.GraveFormat.Seal_Info.SEAL_BAR_CODE">
+            <summary>
+            施封编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.GraveFormat.Seal_Info.SEAL_DATE">
+            <summary>
+            施封时间
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.GraveFormat.Seal_Info.SEAL_POSITION">
+            <summary>
+            施封位置
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.MDSFormat.BoxVerification">
+            <summary>
+            箱子验证
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MDSFormat.BoxVerification.TaskNo">
+            <summary>
+            任务编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MDSFormat.BoxVerification.BoxNo">
+            <summary>
+            箱子编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MDSFormat.BoxVerification.MeterCode">
+            <summary>
+            表条码集合
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.MDSFormat.UpDataInfo">
+            <summary>
+            上传数据的格式
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.MDSFormat.UpDataInfo.TaskNo">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.MDSFormat.UpDataInfo.MeterBars">
+            <summary>
+            表条码集合
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.MDSFormat.WantMeter">
+            <summary>
+            要表类
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MDSFormat.WantMeter.TaskNo">
+            <summary>
+             任务编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MDSFormat.WantMeter.Count">
+            <summary>
+            要表数量
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MDSFormat.WantMeter.MeterType">
+            <summary>
+            类型-1单相-2三相....
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MDSFormat.WantMeter.Model">
+            <summary>
+            要表模式--1按垛，2按只
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.MDSFormat.WebNoticeFormat">
+            <summary>
+            平台通知接口类
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MDSFormat.WebNoticeFormat.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MDSFormat.WebNoticeFormat.Value">
+             <summary>
+            参数
+             </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.MeterFormat.ChipInfo">
+            <summary>
+            芯片信息
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.ChipInfo.TaskNo">
+            <summary>
+            任务编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.ChipInfo.ChipType">
+            <summary>
+            芯片类型
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.ChipInfo.ChipBarCode">
+            <summary>
+            芯片条形码
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.ChipInfo.DeviceBarCode">
+            <summary>
+            设备条形码--模块的时候没有设备
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.ChipInfo.IsLegal">
+            <summary>
+            认证结果1:合法，0不合法
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.ChipInfo.ChipID">
+            <summary>
+            芯片ID
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.MeterFormat.MeterInfo">
+            <summary>
+            表信息类
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_BAR_CODE">
+            <summary>
+            表位条形码
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.METER_ID">
+            <summary>
+            表唯一编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_EPITOPE">
+            <summary>
+            表位号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_RESULT">
+            <summary>
+            结论
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_CHECKED">
+            <summary>
+            是否要检
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_UB">
+            <summary>
+            电压
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_UA">
+            <summary>
+            电流
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_FREQUENCY">
+            <summary>
+            频率
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_TESTMODEL">
+            <summary>
+            首检-抽检
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_TEST_TYPE">
+            <summary>
+            检定类型(全检-抽检)
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_WIRING_MODE">
+            <summary>
+            测量方式(三相四线、三相三线、单相)
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_CONNECTION_FLAG">
+            <summary>
+            直接式-经互感器
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_JJGC">
+            <summary>
+            检定规程
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_ASSET_NO">
+            <summary>
+            资产编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_METER_TYPE">
+            <summary>
+            表类型
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_CONSTANT">
+            <summary>
+            常数
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_GRADE">
+            <summary>
+            等级
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_METER_MODEL">
+            <summary>
+            表型号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_PROTOCOL_NAME">
+            <summary>
+             通讯协议
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_CARR_NAME">
+            <summary>
+            载波协议
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_POSTAL_ADDRESS">
+            <summary>
+            通讯地址
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_FACTORY">
+            <summary>
+            制造厂家
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_CUSTOMER">
+            <summary>
+            送检单位
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_TASK_NO">
+            <summary>
+            任务编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_MADE_NO">
+            <summary>
+            出厂编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_CERTIFICATE_NO">
+            <summary>
+            证书编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_FKTYPE">
+            <summary>
+            费控类型
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_SCHEME_ID">
+            <summary>
+            方案编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_TEST_DATE">
+            <summary>
+            检定日期
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_VALID_DATE">
+            <summary>
+            计检日期
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_TEMPERATURE">
+            <summary>
+            温度
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_HUMIDITY">
+            <summary>
+            湿度
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_SUPERVISOR">
+            <summary>
+            主管
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_AUDIT_PERSON">
+            <summary>
+            核验员
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_TEST_PERSON">
+            <summary>
+            检验员
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_SEAL_1">
+            <summary>
+            铅封1
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_SEAL_2">
+            <summary>
+            铅封2
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_SEAL_3">
+            <summary>
+            铅封3
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_SEAL_4">
+            <summary>
+            铅封4
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_SEAL_5">
+            <summary>
+            铅封5
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_OTHER_1">
+            <summary>
+            备用1
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_OTHER_2">
+            <summary>
+            备用2
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_OTHER_3">
+            <summary>
+            备用3
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_OTHER_4">
+            <summary>
+            备用4
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_OTHER_5">
+            <summary>
+            备用5
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.HANDLE_FLAG">
+            <summary>
+            处理标记 0默认，1以上线，2以下线，5处理完成
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_METER_VERSION">
+             <summary>
+            电表版本，1：2009版本，2：2013版本
+             </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_ERROR_DATA">
+            <summary>
+            故障信息，“|”分割多个
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_TEST_COUNT">
+             <summary>
+            检定次数
+             </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_RECHECK">
+            <summary>
+            是否需要复检,1需要，其他不需要
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_SORT">
+            <summary>
+            电能表类别
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.MeterInfo.MD_ARRIVE_BATCH_NO">
+            <summary>
+            到货批次号
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.MeterFormat.SelectMeterFormat">
+            <summary>
+            查询表信息条件格式
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.SelectMeterFormat.TaskNo">
+            <summary>
+            任务编号
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.MeterFormat.SelectMeterFormat.MeterBar">
+            <summary>
+            表条码集合
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.MeterFormat.TestItemResult">
+            <summary>
+            检定子项结论
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestItemResult.BarCode">
+            <summary>
+            表条码
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestItemResult.TaskNo">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestItemResult.ParaNo">
+            <summary>
+            项目编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestItemResult.ItemName">
+            <summary>
+            子项目名称
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestItemResult.ItemNo">
+            <summary>
+            子项目编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestItemResult.Result">
+            <summary>
+            结论
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestItemResult.TestTime">
+            <summary>
+            检定的时间
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestItemResult.Data1">
+            <summary>
+            检测数据1
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestItemResult.Data2">
+            <summary>
+            检测数据2
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.MeterFormat.TestResult">
+            <summary>
+            检定项目结论
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestResult.BarCode">
+            <summary>
+            表条码
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestResult.TaskNo">
+            <summary>
+            任务编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestResult.ParaNo">
+            <summary>
+            项目编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestResult.ItemIndex">
+            <summary>
+            子项目序号，1开始
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestResult.Result">
+            <summary>
+            结论
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestResult.TestTime">
+            <summary>
+            检定的时间
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestResult.ValidTime">
+            <summary>
+            计检时间
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestResult.TestColumnName">
+            <summary>
+            检定项目所使用的参数列名"|"分割
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestResult.TestParameter">
+            <summary>
+            检定项目所使用检定参数"|"分割
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestResult.ResultColumnName">
+            <summary>
+            检定结论列名"|"分割
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestResult.ResultValue">
+            <summary>
+             检定的数据，多个数据用“^”分割
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestResult.DeviceNo">
+            <summary>
+            检测设备编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.MeterFormat.TestResult.MeterNo">
+            <summary>
+            检测表位编号
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.QueueFormat.QueueInfo">
+            <summary>
+            队列信息
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.QueueFormat.QueueInfo.QUEUE_SIGN">
+            <summary>
+            队列标识
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.QueueFormat.QueueInfo.QUEUE_CLASS">
+            <summary>
+            队列类
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.QueueFormat.QueueInfo.QUEUE_DATA">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.QueueFormat.QueueInfo.QUEUE_INSTE_TIME">
+            <summary>
+            插入时间
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.QueueFormat.QueueInfo.QUEUE_STATE">
+            <summary>
+            队列状态
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.QueueFormat.QueueInfo.TASK_NO">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.RobotCacheFormat.RobotCache">
+            <summary>
+            机器人缓存
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.RobotCacheFormat.RobotCache.ROBOT_ID">
+            <summary>
+            机器人ID
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.RobotCacheFormat.RobotCache.STATION_ID">
+            <summary>
+            工位ID
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.RobotCacheFormat.RobotCache.DATA">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.RobotCacheFormat.RobotCache.SET_TIME">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.RobotCacheFormat.RobotCache.MD_INDEX">
+            <summary>
+            序号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.RobotCacheFormat.RobotCache.MD_DEVICE_TYPE">
+            <summary>
+            设备类型
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.RobotCacheFormat.RobotCache.RESULT">
+            <summary>
+            结论
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.RobotCacheFormat.RobotCache.TASK_NO">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.SchemeFormat.DownSchemaInfo">
+            <summary>
+            下载方案信息
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.SchemeFormat.DownSchemaInfo.SchemaName">
+            <summary>
+            方案名称
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.SchemeFormat.DownSchemaInfo.JJG">
+            <summary>
+            检定规程
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.SchemeFormat.DownSchemaInfo.SchemaNo">
+            <summary>
+            方案编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.SchemeFormat.DownSchemaInfo.SchemaItem">
+            <summary>
+            方案项目
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.SchemeFormat.DownSchemaInfo.ExtentElecCode">
+            <summary>
+            电价标识
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.SchemeFormat.SchemaDataIntegrityValidation">
+            <summary>
+            方案数据完整性验证
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.SchemeFormat.SchemaDataIntegrityValidation.TaskNo">
+            <summary>
+            任务编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.SchemeFormat.SchemaDataIntegrityValidation.MeterBars">
+            <summary>
+            需要验证的表条码
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.SchemeFormat.SchemaDataIntegrityValidation.StationName">
+            <summary>
+            工位名字
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.SchemeFormat.SchemaDataIntegrityValidation.ErrorData">
+            <summary>
+            错误数据
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.SchemeFormat.SchemaInfo">
+            <summary>
+            方案信息
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.SchemeFormat.SchemaInfo.SchemaName">
+            <summary>
+            方案名称
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.SchemeFormat.SchemaInfo.SchemaNodes">
+            <summary>
+            项目节点集合
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.SchemeFormat.SchemaInfo.SchemaNode">
+            <summary>
+            项目节点
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.SchemeFormat.SchemaInfo.SchemaNode.ParaNo">
+            <summary>
+            项目编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.SchemeFormat.SchemaInfo.SchemaNode.Name">
+            <summary>
+            项目名称
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.SchemeFormat.SchemaInfo.SchemaNode.TestValue">
+            <summary>
+            检定参数，用“|”分割
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.SchemeFormat.SchemaProjectDataValidation">
+            <summary>
+            方案指定项目数据完整性验证
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.SchemeFormat.SchemaProjectDataValidation.TaskNo">
+            <summary>
+            任务编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.SchemeFormat.SchemaProjectDataValidation.MeterBars">
+            <summary>
+            需要验证的表条码
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.SchemeFormat.SchemaProjectDataValidation.ProjectNo">
+            <summary>
+            项目编号集合
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.StackFormat.StacksData">
+            <summary>
+            组垛信息
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.StackFormat.StacksData.StackNo">
+            <summary>
+            垛号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.StackFormat.StacksData.TaskNo">
+            <summary>
+            任务编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.StackFormat.StacksData.BoxData">
+            <summary>
+            箱子信息
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.StackFormat.StacksData.BingTime">
+            <summary>
+            绑定时间
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.StackFormat.StacksData.Result">
+            <summary>
+            垛结论
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.StackFormat.StacksData.BoxType">
+            <summary>
+            这垛箱子的类型
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.StationFormat.StationStateFormat">
+            <summary>
+            工位状态修改获取格式
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.StationFormat.StationStateFormat.StationNo">
+            <summary>
+            工位编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.StationFormat.StationStateFormat.StationState">
+            <summary>
+            工位状态,0空闲,1正在检定,5检定完成,9故障
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.StationFormat.StationStateFormat.PulseType">
+            <summary>
+            工位使用脉冲类型,无,光电脉冲，蓝牙脉冲
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.StationFormat.StationTrayBinding">
+            <summary>
+            工位和托盘绑定
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.StationFormat.StationTrayBinding.StationNo">
+            <summary>
+            工位编号
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataFormat.StationFormat.StationTrayBinding.Trays">
+            <summary>
+            托盘集合
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.StationFormat.VersionInfo">
+            <summary>
+            版本信息
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.StationFormat.VersionInfo.StationNo">
+            <summary>
+            工位编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.StationFormat.VersionInfo.VersionNo">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.TaskFormat.TaskInfo">
+            <summary>
+            任务信息表
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.TASK_NO">
+            <summary>
+            任务编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.TASK_COUNT">
+            <summary>
+            任务数量
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.TASK_COMPLETED_COUNT">
+            <summary>
+            任务完成数量
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.REQUESTED_COUNT">
+            <summary>
+            已申请数量
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.TASK_STATE">
+            <summary>
+            当前任务状态1正在执行，2执行完成
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.UP_METER_COUNT">
+            <summary>
+            上表数量
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.DOWN_METER_COUNT">
+            <summary>
+            下表数量
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.PASS_COUNT">
+            <summary>
+            合格数量
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.NO_PASS_COUNT">
+            <summary>
+            不合格数量
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.SCHEMA_NO">
+            <summary>
+            方案编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.FORCT_RESULT">
+            <summary>
+            强制结论的情况，空的情况正常，不是空的情况就需要强制结论，待报废等
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.EXECUTOR_SCHEMA_NO">
+            <summary>
+            执行方案编号_对应mds的方案编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.BUSINESS_TYPE">
+            <summary>
+            业务类型-分拣-全检-抽检等
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.EXECUTOR_SYSTEM_NO">
+            <summary>
+            执行系统编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.EXECUTOR_UNIT_NO">
+            <summary>
+            执行单位编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.EXECUTOR_NO">
+            <summary>
+            执行人编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.EXECUTOR_NAME">
+            <summary>
+            执行人名称
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.MAKER_NO">
+            <summary>
+            制定人编号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.MAKER_NAME">
+            <summary>
+            制定人名称
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.TEST_TYPE">
+            <summary>
+            检测类型-电能表-终端-模块等
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.SERIAL_NO">
+            <summary>
+            序列号--对于部分系统上传时候需要带上序列号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.TASK_STATE_DATE">
+            <summary>
+            任务开始时间
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.TASK_END_DATE">
+            <summary>
+            任务结束时间
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.IS_POWER_TEST">
+            <summary>
+            是否上电检测
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.SCHEMA_NAME">
+            <summary>
+            方案名称,仅用于本地的匹配
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.STACKS_COUNT">
+            <summary>
+            垛的数量
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.TASK_MODEL">
+            <summary>
+            任务模式
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.REQUESTED_STACKS_COUNT">
+            <summary>
+            已申请垛数
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.BATCH_NO">
+            <summary>
+            批次号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.SEALING_CONTAINERS">
+            <summary>
+            是否施封
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TaskFormat.TaskInfo.VERIFICATION_REGULACTION">
+            <summary>
+            检定规程
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataFormat.TrayFormat.TrayInfo">
+            <summary>
+            托盘信息
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TrayFormat.TrayInfo.TRAY_NO">
+            <summary>
+            托盘号
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TrayFormat.TrayInfo.METER_BAR_CODE">
+            <summary>
+            表条码集合
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TrayFormat.TrayInfo.TRAY_STATE">
+            <summary>
+            托盘状态
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TrayFormat.TrayInfo.BING_TIME">
+            <summary>
+            绑定时间
+            </summary>
+        </member>
+        <member name="P:ServiceInterface.DataFormat.TrayFormat.TrayInfo.TASK_NO">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataService.Interfaces.DataStatisticsInterface">
+            <summary>
+            数据统计接口
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.DataStatisticsInterface.GetDayTestInfo(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取检定数量
+            </summary>
+            <param name="SettlementTime">每日结算时间0-23，单位小时</param>
+            <param name="DayCount">查询多少天的数据</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.DataStatisticsInterface.GetDataStatisticsInfo(ServiceInterface.DataFormat.DataStatisticsFormat.DataSelectFormat,System.Int32)">
+            <summary>
+            获取结论统计信息
+            </summary>
+            <param name="SelectWhere">查询条件</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="T:ServiceInterface.DataService.Interfaces.QueueInterface">
+            <summary>
+            队列接口类
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.QueueInterface.QueueEnqueue(ServiceInterface.DataFormat.QueueFormat.QueueInfo,System.Int32)">
+            <summary>
+            插入对象
+            </summary>
+            <param name="QueueInfo">对象信息</param>
+            <param name="MaxTime">接口超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.QueueInterface.QueueRemove(ServiceInterface.DataFormat.QueueFormat.QueueInfo,System.Int32)">
+            <summary>
+            移除对象
+            </summary>
+            <param name="QueueInfo">对象信息</param>
+            <param name="MaxTime">接口超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.QueueInterface.QueuePeek(System.String,System.Int32)">
+            <summary>
+            获取第一个对象
+            </summary>
+            <param name="QueueSign">队列标识</param>
+            <param name="MaxTime">接口超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.QueueInterface.QueueSetState(ServiceInterface.DataFormat.QueueFormat.QueueInfo,System.Int32)">
+            <summary>
+            修改队列对象状态
+            </summary>
+            <param name="QueueInfo">对象信息</param>
+            <param name="MaxTime">接口超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="T:ServiceInterface.DataService.Interfaces.RobotCacheInterface">
+            <summary>
+            机器人缓存数据接口
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.RobotCacheInterface.GetRobotCache(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            获取缓存数据
+            </summary>
+            <param name="RobotID">机器人ID</param>
+            <param name="StationID">工位ID</param>
+            <param name="Index">查询序号,空值查询全部</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.RobotCacheInterface.SetRobotCache(System.Collections.Generic.List{ServiceInterface.DataFormat.RobotCacheFormat.RobotCache},System.Int32)">
+            <summary>
+            修改缓存数据
+            </summary>
+            <param name="RobotCache">机器人数据</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.RobotCacheInterface.DelRobotCache(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            删除缓存数据
+            </summary>
+            <param name="RobotID">机器人ID</param>
+            <param name="StationID">工位ID</param>
+            <param name="Index">查询序号,空值删除全部</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="T:ServiceInterface.DataService.Interfaces.SchemeInterface">
+            <summary>
+            方案接口
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.SchemeInterface.GetShcemaList(System.Int32)">
+            <summary>
+            获取方案列表
+            </summary>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.SchemeInterface.DataIntegrityValidation(System.String,System.String[],System.Int32)">
+            <summary>
+            数据完整性验证
+            </summary>
+            <param name="TaskNo">任务编号</param>
+            <param name="MeterCodes">需要验证的表条码集合</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.SchemeInterface.ProjectDataValidation(System.String,System.String[],System.Collections.Generic.List{System.String},System.Int32)">
+            <summary>
+            子项目数据完整性验证
+            </summary>
+            <param name="TaskNo">任务编号</param>
+            <param name="MeterCodes">需要验证的表条码集合</param>
+            <param name="ParaNo">大项目编号</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="T:ServiceInterface.DataService.Interfaces.BaseInterface">
+            <summary>
+            基础接口
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.BaseInterface.ApiTest(System.String,System.Int32)">
+            <summary>
+            测试接口
+            </summary>
+            <param name="Data">测试数据</param>
+            <param name="MaxTime">接口超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.BaseInterface.GetCoreData(System.String,System.Int32)">
+            <summary>
+            获取标准代码
+            </summary>
+            <param name="CodeName">编码名称</param>
+            <param name="MaxTime">接口超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.BaseInterface.GetSystemTime(System.Int32)">
+            <summary>
+            获取时间
+            </summary>
+            <param name="MaxTime">接口超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.BaseInterface.LoginVerification(System.String,System.String,System.Int32)">
+            <summary>
+            用户登入
+            </summary>
+            <param name="Name">用户名</param>
+            <param name="PassWord">密码</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="T:ServiceInterface.DataService.Interfaces.BoxInterface">
+            <summary>
+            箱子接口
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.BoxInterface.GetBoxData(System.String,System.String,System.Int32)">
+            <summary>
+            获取箱子信息
+            </summary>
+            <param name="BoxNo">箱子编号</param>
+            <param name="TaskNo">任务编号</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.BoxInterface.SetBoxData(ServiceInterface.DataFormat.BoxFormat.BoxInfo,System.Int32)">
+            <summary>
+            设置箱子信息
+            </summary>
+            <param name="BoxInfo">箱子信息</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.BoxInterface.ClearBoxData(System.String,System.String,System.Int32)">
+            <summary>
+            清空箱子信息
+            </summary>
+            <param name="BoxNo">箱号</param>
+            <param name="TaskNo">任务号</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.BoxInterface.BoxAndMeterCheck(System.String,System.String,System.Collections.Generic.List{System.String},System.Int32)">
+            <summary>
+            箱表信息验证
+            </summary>
+            <param name="BoxNo">箱号</param>
+            <param name="TaskNo">任务号</param>
+            <param name="MeterBar">表条码集合</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="T:ServiceInterface.DataService.Interfaces.CacheInterface">
+            <summary>
+            缓存接口
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.CacheInterface.GetCacheData(System.String,System.String,System.String,System.Int32)">
+            <summary>
+              查询缓存信息
+            </summary>
+            <param name="DeviceNo">设备编号(空值所有)</param>
+            <param name="DeviceState">设备状态(空值所有)</param>
+            <param name="TaskNo">任务编号(空值所有)</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.CacheInterface.GetCacheData(ServiceInterface.DataFormat.CacheFormat.CacheInfo,System.Int32)">
+            <summary>
+              查询缓存信息
+            </summary>
+            <param name="cache">缓存信息</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.CacheInterface.SetCacheData(System.Collections.Generic.List{ServiceInterface.DataFormat.CacheFormat.CacheInfo},System.Int32)">
+            <summary>
+            修改缓存信息
+            </summary>
+            <param name="CacaheInfos">缓存设备</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.CacheInterface.ClearCacheData(System.Collections.Generic.List{ServiceInterface.DataFormat.CacheFormat.CacheInfo},System.Int32)">
+            <summary>
+            删除缓存数据
+            </summary>
+            <param name="CacaheInfos">缓存设备</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.CacheInterface.InsertCacheData(System.Collections.Generic.List{ServiceInterface.DataFormat.CacheFormat.CacheInfo},System.Int32)">
+            <summary>
+            插入缓存信息
+            </summary>
+            <param name="CacaheInfos">缓存设备</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="T:ServiceInterface.DataService.Interfaces.GraveInterface">
+            <summary>
+            雕刻接口
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.GraveInterface.GetGraveNo(System.Int32,System.String,System.Int32)">
+            <summary>
+            获取雕刻号
+            </summary>
+            <param name="TaskNo">任务编号,任务号可以为空</param>
+            <param name="Count">获取的数量</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.GraveInterface.SetGraveInfo(System.Collections.Generic.List{ServiceInterface.DataFormat.GraveFormat.Seal_Info},System.Int32)">
+            <summary>
+             设置雕刻信息
+            </summary>
+            <param name="SealInfo">施封信息</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.GraveInterface.GraveChecking(System.String,System.Collections.Generic.List{System.String},System.Int32)">
+            <summary>
+             施封信息验证
+            </summary>
+            <param name="TaskNo">任务编号</param>
+            <param name="MeterBars">核验设备条码号     </param>
+            <param name="MaxTime">超时时间</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="T:ServiceInterface.DataService.Interfaces.MDSInterface">
+            <summary>
+            MDS接口
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MDSInterface.MDSToMeter(ServiceInterface.DataFormat.MDSFormat.WantMeter,System.Int32)">
+            <summary>
+            申请要表
+            </summary>
+            <param name="WantData">申请要表参数</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MDSInterface.MDSToBox(ServiceInterface.DataFormat.MDSFormat.WantMeter,System.Int32)">
+            <summary>
+            申请空箱
+            </summary>
+            <param name="WantData">申请空箱参数</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MDSInterface.UploadMDS(System.String,System.Collections.Generic.List{System.String},System.Int32)">
+            <summary>
+            上传结论
+            </summary>
+            <param name="TaskNo">任务号</param>
+            <param name="BarCode">表条码集合</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MDSInterface.OutBoxVerification(System.String,System.String,System.String[],System.Int32)">
+            <summary>
+            箱子验证
+            </summary>
+            <param name="TaskNo">任务编号</param>
+            <param name="BoxNo">箱子编号</param>
+            <param name="BarCode">表条码集合</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MDSInterface.TaskCompleted(System.String,System.Int32)">
+            <summary>
+             通知任务完成
+            </summary>
+            <param name="TaskNo">任务编号</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MDSInterface.UpBoxAndStacks(ServiceInterface.DataFormat.StackFormat.StacksData,System.Int32)">
+            <summary>
+             上传组箱组垛信息
+            </summary>
+            <param name="StacksData">垛信息</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MDSInterface.UpSealData(System.String,System.Collections.Generic.List{System.String},System.Int32)">
+            <summary>
+             上传施封信息
+            </summary>
+            <param name="TaskNo">任务号</param>
+            <param name="BarCode">表条码集合</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MDSInterface.WebNotice(System.String,System.Object,System.Int32)">
+            <summary>
+             通知消息到平台
+            </summary>
+            <param name="Name">消息名称</param>
+            <param name="Value">消息内容</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="T:ServiceInterface.DataService.Interfaces.MeterInterface">
+            <summary>
+            表信息接口
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MeterInterface.GetMeterInfo(System.String,System.Int32)">
+            <summary>
+            获取表信息
+            </summary>
+            <param name="StationID">工位ID</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MeterInterface.GetSchemeInfo(System.String,System.Int32)">
+            <summary>
+            获取方案信息
+            </summary>
+            <param name="TaskNo">任务编号</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MeterInterface.UploadResultData(System.Collections.Generic.List{ServiceInterface.DataFormat.MeterFormat.TestResult},System.Int32)">
+            <summary>
+            上传检定结论数据
+            </summary>
+            <param name="Results">结论集合</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>上传结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MeterInterface.UploadItemResultData(System.Collections.Generic.List{ServiceInterface.DataFormat.MeterFormat.TestItemResult},System.Int32)">
+            <summary>
+            上传子项结论数据
+            </summary>
+            <param name="Results">结论集合</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>上传结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MeterInterface.ChipCertification(System.Collections.Generic.List{ServiceInterface.DataFormat.MeterFormat.ChipInfo},System.Int32)">
+            <summary>
+            芯片ID认证
+            </summary>
+            <param name="ChipInfos">需要芯片认证集合</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MeterInterface.GetCodeMeterInfo(System.Collections.Generic.List{System.String},System.String,System.Int32)">
+            <summary>
+            根据表条码和任务号获取表信息
+            </summary>
+            <param name="MeterBars">表条码集合</param>
+            <param name="TaskNo">任务编号</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MeterInterface.GetCodeMeterInfo(System.Collections.Generic.List{System.String},System.Int32)">
+            <summary>
+            根据表条码获取表信息
+            </summary>
+            <param name="MeterBars">表条码集合</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MeterInterface.SetMeterStateInfo(System.Collections.Generic.List{ServiceInterface.DataFormat.MeterFormat.MeterInfo},System.Int32)">
+            <summary>
+            修改表状态
+            </summary>
+            <param name="MeterInfos">表信息</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MeterInterface.SetMeterTestCount(System.Collections.Generic.List{System.String},System.String,System.Int32)">
+            <summary>
+            检定次数添加
+            </summary>
+            <param name="MeterBars">表条码</param>
+            <param name="TaskNo">任务号</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.MeterInterface.GenerateDemoData(System.Collections.Generic.List{ServiceInterface.DataFormat.MeterFormat.MeterInfo},System.Int32)">
+            <summary>
+            生成测试数据
+            </summary>
+            <param name="MeterInfos">测试数据</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="T:ServiceInterface.DataService.Interfaces.FileInterface">
+            <summary>
+            文件接口
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.FileInterface.UploadFileData(System.Collections.Generic.List{ServiceInterface.DataFormat.FileFormat.FileData},System.Int32)">
+            <summary>
+            上传文件数据
+            </summary>
+            <param name="FileData">文件数据集合</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="T:ServiceInterface.DataService.Interfaces.SealInterface">
+            <summary>
+            封印接口
+            </summary>
+        </member>
+        <member name="T:ServiceInterface.DataService.Interfaces.StackInterface">
+            <summary>
+            堆垛接口
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.StackInterface.SetStackData(ServiceInterface.DataFormat.StackFormat.StacksData,System.Int32)">
+            <summary>
+            设置垛数据
+            </summary>
+            <param name="StackInfo">垛信息</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.StackInterface.InsertStackData(ServiceInterface.DataFormat.StackFormat.StacksData,System.Int32)">
+            <summary>
+            插入垛数据
+            </summary>
+            <param name="StackInfo">垛信息</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.StackInterface.DelStackData(System.String,System.String,System.Int32)">
+            <summary>
+            删除垛数据
+            </summary>
+            <param name="StackNo">垛号</param>
+            <param name="TaskNo">任务号</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.StackInterface.GetStackData(System.String,System.String,System.Int32)">
+            <summary>
+            获取垛数据
+            </summary>
+            <param name="StackNo">垛号</param>
+            <param name="TaskNo">任务号</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="T:ServiceInterface.DataService.Interfaces.StationInterface">
+            <summary>
+            工位接口
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.StationInterface.UploadSoftwareVersion(System.String,System.String,System.Int32)">
+            <summary>
+            上传软件版本
+            </summary>
+            <param name="StationNo">工位编号</param>
+            <param name="VersionNo">软件版本号</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.StationInterface.SetStationTrayNo(System.String,System.String[],System.Int32)">
+            <summary>
+            工位绑定托盘
+            </summary>
+            <param name="StationNo">工位编号</param>
+            <param name="Trays">托盘集合</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.StationInterface.ClearStationBing(System.String,System.Int32)">
+            <summary>
+            清除工位绑定
+            </summary>
+            <param name="StationNo">工位编号</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.StationInterface.SetStationState(System.String,System.String,System.Int32)">
+            <summary>
+            设置工位状态
+            </summary>
+            <param name="StationNo">工位编号</param>
+            <param name="StationState">工位状态</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.StationInterface.GetStationState(System.String,System.Int32)">
+            <summary>
+            获取工位状态
+            </summary>
+            <param name="StationNo">工位编号</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="T:ServiceInterface.DataService.Interfaces.TaskInterface">
+            <summary>
+            任务接口
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.TaskInterface.SetTaskState(System.String,System.Int32,System.Int32)">
+            <summary>
+            修改任务状态
+            </summary>
+            <param name="TaskNo">任务编号</param>
+            <param name="TaskState">任务状态</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.TaskInterface.SetTaskScheme(System.String,System.String,System.Int32)">
+            <summary>
+            修改任务的方案
+            </summary>
+            <param name="TaskNo">任务编号</param>
+            <param name="SchemeNo">方案编号</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.TaskInterface.GetTaskInfo(System.String,System.Int32)">
+            <summary>
+            获取任务信息
+            </summary>
+            <param name="TaskNo">任务编号</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.TaskInterface.GetStateTaskInfo(System.Int32,System.Int32)">
+            <summary>
+            获取指定状态任务
+            </summary>
+            <param name="StackState">任务状态</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.TaskInterface.GetTaskListInfo(System.Int32,System.Int32)">
+            <summary>
+            获取任务列表
+            </summary>
+            <param name="MinTaskCount">最少获取的数量</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.TaskInterface.SetTaskInfo(ServiceInterface.DataFormat.TaskFormat.TaskInfo,System.Int32)">
+            <summary>
+            修改任务信息
+            </summary>
+            <param name="TaskInfo">任务信息</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.TaskInterface.SetTaskTestCount(ServiceInterface.DataFormat.TaskFormat.TaskInfo,System.Int32)">
+            <summary>
+            修改任务检测数量
+            </summary>
+            <param name="TaskInfo">任务信息</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="T:ServiceInterface.DataService.Interfaces.TrayInterface">
+            <summary>
+            托盘接口类
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.TrayInterface.GetTrayData(System.String,System.Int32)">
+            <summary>
+            获取托盘信息
+            </summary>
+            <param name="TrayNo">托盘编号</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.TrayInterface.GetTrayDataList(System.Collections.Generic.List{System.String},System.Int32)">
+            <summary>
+            获取托盘信息集合
+            </summary>
+            <param name="TrayNoList">托盘编号集合</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.TrayInterface.SetTrayData(ServiceInterface.DataFormat.TrayFormat.TrayInfo,System.Int32)">
+            <summary>
+            设置托盘数据
+            </summary>
+            <param name="TrayInfo">托盘信息</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Interfaces.TrayInterface.ClearTrayData(System.String,System.Int32)">
+            <summary>
+            清空托盘数据
+            </summary>
+            <param name="TrayNo">托盘编号</param>
+            <param name="MaxTime">超时时间</param>
+            <returns>请求结果</returns>
+        </member>
+        <member name="T:ServiceInterface.DataService.Services">
+            <summary>
+            服务接口
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataService.Services.#ctor(System.String,System.String)">
+            <summary>
+            初始化数据服务
+            </summary>
+            <param name="IP">数据服务IP地址</param>
+            <param name="Port">数据服务端口号</param>
+        </member>
+        <member name="M:ServiceInterface.DataService.Services.LoginApi(System.String,System.String)">
+            <summary>
+             登入API获取操作权限 
+            </summary>
+            <param name="Name">登入用户名</param>
+            <param name="PassWord">登入密码</param>
+        </member>
+        <member name="F:ServiceInterface.DataService.Services.Base">
+            <summary>
+            基础接口
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Services.Box">
+            <summary>
+            箱子接口
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Services.Cache">
+            <summary>
+            缓存接口
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Services.Grave">
+            <summary>
+            雕刻接口
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Services.MDS">
+            <summary>
+            MDS接口
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Services.Meter">
+            <summary>
+            表信息接口
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Services.File">
+             <summary>
+            文件接口
+             </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Services.Seal">
+            <summary>
+            封印接口
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Services.Stack">
+            <summary>
+            堆垛接口
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Services.Station">
+            <summary>
+            工位接口
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Services.Task">
+            <summary>
+            任务接口
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Services.Tray">
+            <summary>
+            托盘接口
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Services.Scheme">
+            <summary>
+            方案接口
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Services.DataStatistics">
+            <summary>
+            数据统计接口
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Services.RobotCache">
+            <summary>
+            机器人缓存接口
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Services.Queue">
+            <summary>
+            队列接口
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Function.ApiHelper.Grade">
+            <summary>
+            权限等级
+            </summary>
+        </member>
+        <member name="M:ServiceInterface.DataService.Function.ApiHelper.HttpApi(System.String,System.String,System.String,System.Int32,System.String@)">
+            <summary>
+            调用api返回json
+            </summary>
+            <param name="url">api地址</param>
+            <param name="jsonstr">接收参数</param>
+            <param name="type">类型</param>
+            <param name="MaxTime">超时时间</param>
+            <param name="msg">异常信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:ServiceInterface.DataService.Function.WebApi.#ctor(System.String,System.String,System.String,ServiceInterface.DataService.Function.ApiGrade)">
+            <summary>
+            
+            </summary>
+            <param name="interfaceType">接口类型</param>
+            <param name="functionName">方法名称</param>
+            <param name="requestType"> 请求的类型-POST--GET--PUT...</param>
+            <param name="grade">所需访问权限</param>
+        </member>
+        <member name="F:ServiceInterface.DataService.Function.WebApi.InterfaceType">
+            <summary>
+            接口类型
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Function.WebApi.FunctionName">
+            <summary>
+            方法名称
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Function.WebApi.RequestType">
+            <summary>
+            请求的类型-POST--GET--PUT...
+            </summary>
+        </member>
+        <member name="F:ServiceInterface.DataService.Function.WebApi.Grade">
+            <summary>
+            权限等级
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ZH.ChkSum" Collapsed="true">
+    <Position X="108.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\ChkSum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.DataFormart" Collapsed="true">
+    <Position X="106.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACACAAAAAAAAQQAAAAAEAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Device\DataFormart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.RequestInit2018PortPacket" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceAbstractClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.ZHRecvPacket_CLT11" Collapsed="true">
+    <Position X="79.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAAAABAAAAAAAAAAAAAAEAABAUAAAAAAAAAAAAAAAAU=</HashCode>
+      <FileName>Device\DeviceAbstractClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.ZHSendPacket_CLT11" Collapsed="true">
+    <Position X="27.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAAAABAAAAAAAAAAAAAgAAABAAAAAAAAAAAAAAAAAgQ=</HashCode>
+      <FileName>Device\DeviceAbstractClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.QGDW376SendPacket" Collapsed="true">
+    <Position X="52.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAABAAAAAAAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Device\DeviceAbstractClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.QGDW376RecvPacket" Collapsed="true">
+    <Position X="104" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAEQ=</HashCode>
+      <FileName>Device\DeviceAbstractClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.ZHRecvPacket_NotCltOne" Collapsed="true">
+    <Position X="54.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceAbstractClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.ZHSendPacket_NotCltOne" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceAbstractClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.ZHRecvPacket_NotCltTwo" Collapsed="true">
+    <Position X="56.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceAbstractClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.ZHSendPacket_NotCltTwo" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceAbstractClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.ZHRecvPacket_NotCtl" Collapsed="true">
+    <Position X="55.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAABAAUAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Device\DeviceAbstractClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.ZHSendPacket_NotClt" Collapsed="true">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAABAAAAAAAAAAAAAgAABIAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Device\DeviceAbstractClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.RecvPacket_Nothing" Collapsed="true">
+    <Position X="101.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAUAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceAbstractClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.SendPacket_Nothing" Collapsed="true">
+    <Position X="50" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceAbstractClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.ZH3001SendPacket" Collapsed="true">
+    <Position X="27.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceBaseClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.ZH3001RecvPacket" Collapsed="true">
+    <Position X="79.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceBaseClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.DriverBase" Collapsed="true">
+    <Position X="108.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAACAAAAAAAAAAAAAAAAAAAAAAEAAACAA=</HashCode>
+      <FileName>Device\DriverBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.ZH3001" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="111.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AKQAkCQAggIASCABAABAAIsAEBCAAAAAAgAAYAAAGAA=</HashCode>
+      <FileName>ZH3001.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestReadAmplitudePacket" Collapsed="true">
+    <Position X="14" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestReadAmplitudeReplayPacket" Collapsed="true">
+    <Position X="65.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAEAAAAAAQABAAAEAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestReadAnglePacket" Collapsed="true">
+    <Position X="23" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestReadAngleReplayPacket" Collapsed="true">
+    <Position X="74.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAEAAAAAAQABAAAEAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestReadPowerPacket" Collapsed="true">
+    <Position X="32" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestReadPowerReplayPacket" Collapsed="true">
+    <Position X="83.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAEAAAAAAQABAAAEAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestLinkPacket" Collapsed="true">
+    <Position X="41" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestLinkReplyPacket" Collapsed="true">
+    <Position X="92.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestPowerAmplitudePacket" Collapsed="true">
+    <Position X="7.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABkAAAAAAAAAAAAAABAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestPowerAmplitudeReplyPacket" Collapsed="true">
+    <Position X="59" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestPowerAnglePacket" Collapsed="true">
+    <Position X="16.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABkAAAAAAAAAAAAACBAAAAAAABAAAAAAAAAABAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestPowerAngleReplyPacket" Collapsed="true">
+    <Position X="68" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestPowerOnPacket" Collapsed="true">
+    <Position X="25.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABkBAAAAAAAAAAAACBAAIAAAABAAAAAAAAAABIA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestPowerOnReplyPacket" Collapsed="true">
+    <Position X="77" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestLoadCurrentPacket" Collapsed="true">
+    <Position X="34.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABgAAAAAAAAAAAAAABAAAAAAABAAAAAAACAAAIA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestLoadCurrentReplyPacket" Collapsed="true">
+    <Position X="86" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestPowerModePacket" Collapsed="true">
+    <Position X="43.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAABAAAAAAABAAAAAAAAAAAIA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestPowerModeReplyPacket" Collapsed="true">
+    <Position X="95" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestPowerUpdatePacket" Collapsed="true">
+    <Position X="9.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAABAAAAAAABAAAAAAAAAAAIA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestPowerUpdateReplyPacket" Collapsed="true">
+    <Position X="61.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestPowerOn_OffPacket" Collapsed="true">
+    <Position X="18.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAABAAAAAAABAAAAAAAAAAAIA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestPowerOn_OffReplyPacket" Collapsed="true">
+    <Position X="70.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestSetPowerLoopTypePacket" Collapsed="true">
+    <Position X="27.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABACAAAAAAAAAAAAABAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestSetPowerLoopTypeReplyPacket" Collapsed="true">
+    <Position X="79.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestSetPowerGearPacket" Collapsed="true">
+    <Position X="36.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAABAAAAAAABAAAgAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestSetPowerGearReplyPacket" Collapsed="true">
+    <Position X="88.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestPowerGetHarmonicPacket" Collapsed="true">
+    <Position X="45.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAhgAAAAAAAACAAAAABAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestGetHarmonicReplyPacket" Collapsed="true">
+    <Position X="97.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestPowerHarmonicPacket" Collapsed="true">
+    <Position X="11.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAACAAAAABAAAAAAABAAAAAAAAAAACA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestPowerHarmonicReplyPacket" Collapsed="true">
+    <Position X="63.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestCalibrationPowerPacket" Collapsed="true">
+    <Position X="20.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAEAAAABAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestCalibrationPowerReplyPacket" Collapsed="true">
+    <Position X="72.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestStartCalibrationPowerPacket" Collapsed="true">
+    <Position X="29.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestStartCalibrationPowerReplyPacket" Collapsed="true">
+    <Position X="81.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestCalibrationPowerAmplitudePacket" Collapsed="true">
+    <Position X="38.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABkAAAAAAAAAAAAAABAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestCalibrationPowerAmplitudeReplyPacket" Collapsed="true">
+    <Position X="90.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestCalibrationPowerAnglePacket" Collapsed="true">
+    <Position X="47.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABkAAAAAAAAAAAAAABAAAAAAABAAAAAAAAAABAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="E_ZH3001.ZH3001_RequestCalibrationPowerAngleReplyPacket" Collapsed="true">
+    <Position X="99.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Device\DeviceClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.LogModel.LogFrameInfo" Collapsed="true">
+    <Position X="110" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACACCCBAADAAAAEEBAAAAAAEAAIABABAAACAIQAQAAg=</HashCode>
+      <FileName>LogModel\LogFrameInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.ByteBuffer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="106.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAEAAgATgEQRBgCIAAABBgoBCkAAAAABIlAAq4gEw=</HashCode>
+      <FileName>SocketModule\ByteBuffer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZH.SocketModule.Packet.Packet" Collapsed="true">
+    <Position X="52.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAIAAAAAAAAAAAAABAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>SocketModule\Packet\Packet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.SocketModule.Packet.RecvPacket" Collapsed="true">
+    <Position X="79.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SocketModule\Packet\RecvPacket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.SocketModule.Packet.SendPacket" Collapsed="true">
+    <Position X="26.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SocketModule\Packet\SendPacket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.SocketModule.Sock.COM32" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="110" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACQAAIBAIAABAAAAAAiAAAACAAAAAQAGCACEAAA=</HashCode>
+      <FileName>SocketModule\Sock\COM32.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZH.SocketModule.Sock.Connection" Collapsed="true">
+    <Position X="111.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAEABAAAAAAAAAIAAAAAAAACAAAA=</HashCode>
+      <FileName>SocketModule\Sock\Connection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.SocketModule.Sock.UDPClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="110" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAAQAAIABoAABABAAIAAAAAAAgAAAAAACCACAABQ=</HashCode>
+      <FileName>SocketModule\Sock\UDPClient.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ZH.SocketModule.SockPool" Collapsed="true">
+    <Position X="111.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAgAAAAAIAEAACAAAEAAAAAAAAAgAAAAUAAAAABAAAA=</HashCode>
+      <FileName>SocketModule\SockPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.Struct.StPortInfo" Collapsed="true">
+    <Position X="106.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAgAAAAAAAAAAAAgAAAAAAAAAQAAAAAAEAAA=</HashCode>
+      <FileName>Struct\StPortInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZH.Struct.StSRFrame" Collapsed="true">
+    <Position X="108.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAACAAAAAAAAEAAAAAAAAAAAgAAE=</HashCode>
+      <FileName>Struct\StSRFrame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="ZH.Struct.StEquipInfo" Collapsed="true">
+    <Position X="108.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAEAAQEAAAAAQAAAAAABABAQIA=</HashCode>
+      <FileName>Struct\StEquipInfo.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ZH.Struct.UIPara" Collapsed="true">
+    <Position X="106.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAARAAAAAIAIAAAAAAAAAAAAAAAAAAAARAA=</HashCode>
+      <FileName>Struct\Struct.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ZH.Struct.PhiPara" Collapsed="true">
+    <Position X="106.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAEEACAAEgAAAAAAAAAA=</HashCode>
+      <FileName>Struct\Struct.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ZH.Struct.stStdInfo" Collapsed="true">
+    <Position X="111.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>pCACAIADAAERBwAAAJaIAwAAAAAAEQAmAAAAQATwRAA=</HashCode>
+      <FileName>Struct\Struct.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ZH.Struct.stGHPram" Collapsed="true">
+    <Position X="110" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAQQACAAAAAAAQAAAAAAAAAAAQAAAEAEIAAAACAA=</HashCode>
+      <FileName>Struct\Struct.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="ZH.IClass_Interface" Collapsed="true">
+    <Position X="108.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAECQAAgIAQCAAAABAAIsAEBCAAAAAAAAAQAAAGAA=</HashCode>
+      <FileName>ZH3001.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZH.IClass_Events" Collapsed="true">
+    <Position X="106.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>ZH3001.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ZH.SocketModule.Sock.IConnection" Collapsed="true">
+    <Position X="110" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAIAAIAABAAAAAAAAAAAAAAAAAAAACACAAAA=</HashCode>
+      <FileName>SocketModule\Sock\IConnection.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ZH.WorkFlow" Collapsed="true">
+    <Position X="110" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIQAAAAAAAAAAAABgAgCBAAAAACAAAAACAAAEAAIA=</HashCode>
+      <FileName>Device\WorkFlow.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZH.Enum.Cus_Clfs" Collapsed="true">
+    <Position X="106.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAEAAAAAAAABAQAA=</HashCode>
+      <FileName>Enum\Cus_Clfs.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZH.Enum.Cus_PowerPhase" Collapsed="true">
+    <Position X="110" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAARgAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enum\Cus_Clfs.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZH.Enum.Cus_PowerFangXiang" Collapsed="true">
+    <Position X="108.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAQAAEQAAAAAAAgEAAAAAAQAAAACAAAAAAAA=</HashCode>
+      <FileName>Enum\Cus_PowerFangXiang.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZH.Enum.Cus_PowerYuanJiang" Collapsed="true">
+    <Position X="111.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAoEEAAAA=</HashCode>
+      <FileName>Enum\Cus_PowerYuanJiang.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZH.Enum.enmStdPulseType" Collapsed="true">
+    <Position X="106.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Enum\StdPulseType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ZH.SocketModule.Packet.RecvResult" Collapsed="true">
+    <Position X="108.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAABABAAAAAQAAAAAABAQEAAAA=</HashCode>
+      <FileName>SocketModule\Packet\RecvResult.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

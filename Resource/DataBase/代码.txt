@@ -1,0 +1,63 @@
+private Dictionary<string, Dictionary<string, string>> 初始化码值表(string codeValueAddress)
+{
+    if (IsInitConfig) return dicCodeValue;
+    //不需要配置路径呀
+    codeValueAddress = System.IO.Directory.GetCurrentDirectory() + "\\System\\CodeValue.xlsx";
+    var dic = new Dictionary<string, Dictionary<string, string>>();
+    // 创建工作簿对象
+    Workbook workbook = new Workbook(codeValueAddress);
+    // 获取第一个工作表
+    Worksheet worksheet = workbook.Worksheets[0];
+    // 获取行数和列数
+    int rowCount = worksheet.Cells.MaxDataRow + 1; // MaxDataRow是从0开始的
+    int colCount = worksheet.Cells.MaxDataColumn + 1; // MaxDataColumn是从0开始的
+
+    // 提前读取所有数据
+    var data = new string[rowCount, colCount];
+    for (int row = 0; row < rowCount; row++)
+    {
+        for (int col = 0; col < colCount; col++)
+        {
+            data[row, col] = worksheet.Cells[row, col].StringValue;
+        }
+    }
+    // 遍历所有行
+    for (int row = 0; row < rowCount; row++)
+    {
+        Console.WriteLine(row);
+        if (colCount < 5) continue;
+
+        string name = data[row, 1];
+        string key = data[row, 3];
+        string value = data[row, 2];
+
+        if (!dic.ContainsKey(name))
+        {
+            dic[name] = new Dictionary<string, string>();
+        }
+        if (!dic[name].ContainsKey(key))
+        {
+            dic[name][key] = value;
+        }
+    }
+    IsInitConfig = true;
+    return dic;
+}
+
+
+
+
+
+private string GetCodeValue(string node, string key)
+{
+    if (!Mds_WebApi.dicCodeValue.ContainsKey(node))
+    {
+        throw new Exception($"码值表中无值，请添加！{node},{key}");
+    }
+    if (!Mds_WebApi.dicCodeValue[node].ContainsKey(key))
+    {
+        throw new Exception($"码值表中无值，请添加！{node},{key}");
+    }
+
+    return dicCodeValue[node][key];
+}

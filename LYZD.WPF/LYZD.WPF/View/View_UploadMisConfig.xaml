@@ -1,0 +1,70 @@
+﻿<basemodel:DockControlDisposable 
+             xmlns:basemodel="clr-namespace:LYZD.WPF.Model"
+             x:Class="LYZD.WPF.View.View_UploadMisConfig"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:ViewModel1="clr-namespace:LYZD.ViewModel.MisConfig;assembly=LYZD.ViewModel"
+    mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <basemodel:DockControlDisposable.Resources>
+        <ViewModel1:MisConfigViewModel x:Key="MisConfigViewModel"/>
+    </basemodel:DockControlDisposable.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TreeView  x:Name="treeSchema"
+				Margin="5,0,5,3"
+				SelectedItemChanged="treeSchema_ActiveItemChanged">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                    <TextBlock Text="{Binding Name}"
+                                   Margin="2"
+							VerticalAlignment="Center"/>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+        <GridSplitter HorizontalAlignment="Right"
+                      Width="3"
+                      Background="{DynamicResource 分隔条颜色}"/>
+        <Grid Grid.Column="1"
+              Margin="3"
+              DataContext="{StaticResource MisConfigViewModel}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{DynamicResource 表名称}"
+                           VerticalAlignment="Center"/>
+                <ComboBox Width="200"
+                          ItemsSource="{Binding TableNames}"
+                          Margin="3" 
+                          Style="{DynamicResource StyleComboBox}" 
+                          SelectedItem="{Binding TableName, Mode=TwoWay}"/>
+                <Button Content="{DynamicResource 保存}"
+                        Margin="5"
+                        Width="80" VerticalAlignment="Center"
+                        Style="{DynamicResource ButtonStyleBorder}"/>
+            </StackPanel>
+            <DataGrid Grid.Row="1"
+                      HorizontalAlignment="Left" 
+                      HeadersVisibility="Column"
+                      Style="{DynamicResource dataGridStyleGeneral}" 
+                      ItemsSource="{Binding Units}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="{DynamicResource 结论名称}"
+                                            Binding ="{Binding ResultName}"
+                                        Width="200"/>
+                    <DataGridComboBoxColumn Header="{DynamicResource 字段名}"
+                                        Width="200" 
+                                            SelectedItemBinding="{Binding ColumnName}" 
+                                            ItemsSource="{Binding FieldNames}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</basemodel:DockControlDisposable>  

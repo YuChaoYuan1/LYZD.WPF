@@ -1,0 +1,167 @@
+﻿<basemodel1:DockControlDisposable  xmlns:basemodel1="clr-namespace:LYZD.WPF.Model"
+                     xmlns:Controls="clr-namespace:LYZD.WPF.Controls" 
+             x:Class="LYZD.WPF.View.View_Input"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ViewModel="clr-namespace:LYZD.ViewModel.InputPara;assembly=LYZD.ViewModel"
+             xmlns:basemodel="clr-namespace:LYZD.WPF.Model"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Foreground="{DynamicResource 字体颜色标准}"
+             d:DesignHeight="600"
+             d:DesignWidth="1200">
+    <basemodel:DockControlDisposable.Resources>
+        <ViewModel:MeterInputParaViewModel x:Key="MeterInputParaViewModel"/>
+
+        <DataGridTemplateColumn x:Key="KeyYaojianColumn"  Width="25">
+            <DataGridTemplateColumn.CellTemplate>
+                <DataTemplate>
+                    <CheckBox IsChecked="{Binding MD_CHECKED, Converter={StaticResource BoolBitConverter}}"
+                              Click="CheckBox_Click"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Center"/>
+                </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+        </DataGridTemplateColumn>
+    </basemodel:DockControlDisposable.Resources>
+
+
+
+    <Grid DataContext="{StaticResource MeterInputParaViewModel}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Rectangle Height="55"
+                   HorizontalAlignment="Stretch"
+                   Grid.ColumnSpan="2"
+                   Fill="{DynamicResource 窗口背景深色}"
+                   />
+        <WrapPanel Name="wrapPanelParas"
+                   Orientation="Vertical"
+                   Height="55"
+                   VerticalAlignment="Top" />
+
+        <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    Margin="30,0,0,0"
+                    Grid.Column="1">
+            <CheckBox Name="checkBoxQuickInput"
+                      Content="{DynamicResource 快速录入}"
+                      Margin="3"
+                      VerticalAlignment="Bottom"
+                      IsChecked="True"/>
+            <!--<StackPanel VerticalAlignment="Top"    Margin="5,0">
+                <TextBlock Text="通讯方式"    Margin="3"/>
+                <Controls:ControlEnumComboBox    Margin="3" Width="160"  MaxWidth="180"  EnumName="CommunicationType"  Style="{DynamicResource StyleComboBox}"
+                                                      SelectedValue="{Binding Setting,Mode=TwoWay}" />
+            </StackPanel>-->
+            <StackPanel VerticalAlignment="Top"    Margin="5,0">
+                <TextBlock Text="{DynamicResource 检定方案}"    Margin="3"/>
+                <ComboBox Grid.Column="1" 
+                          Name="comboBoxSchema"
+                          Width="160"
+                          MaxWidth="180"
+                          Margin="3"
+                          ItemsSource="{Binding Schemas}"
+                          SelectedItem="{Binding SelectedSchema, Mode=TwoWay}"
+                          VerticalAlignment="Top"
+                          HorizontalAlignment="Left"
+                          Style="{DynamicResource StyleComboBox}" >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding SCHEMA_NAME}"   ToolTip="{Binding SCHEMA_NAME}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    Grid.Column="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Right">
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="Margin" Value="5 0" />
+                    <Setter Property="Background" Value="{DynamicResource 窗口背景深色}"/>
+                </Style>
+            </StackPanel.Resources>
+
+
+            <Button ToolTip="通过条形码解析逻辑地址" 
+                                    CommandParameter="AnalyzeBarcodeGetAddress"
+                                    Command="{Binding LocalCommand}"  >
+                <StackPanel Orientation="Vertical" >
+                    <Image Width="24" Height="24"  Source="/Images/png-1431.png"/>
+                    <TextBlock Text="解析逻辑地址" />
+                </StackPanel>
+            </Button>
+            <Button ToolTip="从工控获取任务"
+                                    CommandParameter="Frame_DownModuleTask"
+                                    Command="{Binding LocalCommand}">
+                <StackPanel Orientation="Vertical">
+                    <Image Width="24" Height="24"  Source="/Images/png-0050.png"/>
+                    <TextBlock Text="获取任务"/>
+                </StackPanel>
+            </Button>
+            <Button ToolTip="从MDS下载检定方案"
+                                    CommandParameter="Frame_DownSchemeMis"
+                                    Command="{Binding LocalCommand}">
+                <StackPanel Orientation="Vertical">
+                    <Image Width="24" Height="24"  Source="/Images/png-0050.png"/>
+                    <TextBlock Text="下载方案"/>
+                </StackPanel>
+            </Button>
+            <Button ToolTip="下载电表数据"
+                                    CommandParameter="Frame_DownMeterInfoFromMis"
+                                    Command="{Binding LocalCommand}" >
+                <StackPanel Orientation="Vertical">
+                    <Image Width="24" Height="24"  Source="/Images/Down.png"/>
+                    <TextBlock Text="下载信息"/>
+                </StackPanel>
+            </Button>
+            <Button ToolTip="点击按钮更换新的一批待检定的表,原来的表的检定信息将会被清空!"
+                                    CommandParameter="NewMeters"
+                                    Command="{Binding LocalCommand}" >
+                <StackPanel Orientation="Vertical">
+                    <Image Width="24" Height="24"  Source="/Images/Replace.png"/>
+                    <TextBlock Text="更换新表"/>
+                </StackPanel>
+            </Button>
+            <Button  ToolTip="点击按钮录入表信息完毕,开始进行检定"
+                                     CommandParameter="UpdateMeterInfo"
+                                     Command="{Binding LocalCommand}" >
+                <StackPanel Orientation="Vertical">
+                    <Image Width="24" Height="24"  Source="/Images/OK.png"/>
+                    <TextBlock Text="录入完成"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <DataGrid Name="dgv_MeterData"
+                  Margin="3"
+                  Grid.ColumnSpan="2"
+                  Grid.Row="1"
+                  Style="{StaticResource dataGridStyleGeneral}"
+                  AutoGenerateColumns="False"
+                  CellEditEnding="dgv_MeterData_CellEditEnding"
+                  ItemsSource="{Binding Meters}"
+                  ComboBox.SelectionChanged="Event_AddNew"
+                  HeadersVisibility="Column" >
+            <DataGrid.ContextMenu>
+                <ContextMenu MenuItem.Click="Click_IsChecked">
+                    <MenuItem x:Name="UpCheck" Header="向上选表"/>
+                    <MenuItem x:Name="DownCheck" Header="向下选表"/>
+                    <MenuItem x:Name="NoUpCheck" Header="向上取消选表"/>
+                    <MenuItem x:Name="NoDownCheck" Header="向下取消选表"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+                  
+    </Grid>
+</basemodel1:DockControlDisposable>

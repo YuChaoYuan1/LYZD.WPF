@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2C340BC-0FBA-4022-B862-257048D5D44B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LY.VirtualMeter</RootNamespace>
+    <AssemblyName>LY.VirtualMeter</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Resource\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>智能电表.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="ProtocolAnalysis, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\代码\通讯协议解析\ProtocolAnalysis\ProtocolAnalysis\bin\Debug\ProtocolAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AppData.cs" />
+    <Compile Include="Assets\Controls\MeterData.xaml.cs">
+      <DependentUpon>MeterData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\AccessHelper.cs" />
+    <Compile Include="Core\CAN\CANCannel.cs" />
+    <Compile Include="Core\CAN\CanCommuinication.cs" />
+    <Compile Include="Core\CAN\CANDll.cs" />
+    <Compile Include="Core\CAN\CanHelper.cs" />
+    <Compile Include="Core\EncryptionFunction698.cs" />
+    <Compile Include="Core\FactoryEncryptionFunction698.cs" />
+    <Compile Include="Core\File.cs" />
+    <Compile Include="Core\Function.cs" />
+    <Compile Include="Core\LogInfoHelper.cs" />
+    <Compile Include="Core\SerialPorts.cs" />
+    <Compile Include="Core\SYSTEMTIME.cs" />
+    <Compile Include="Core\XmlHelper.cs" />
+    <Compile Include="ViewModel\BaseData.cs" />
+    <Compile Include="ViewModel\LogViewModel.cs" />
+    <Compile Include="ViewModel\MainViewWindow.cs" />
+    <Compile Include="ViewModel\Meter.cs" />
+    <Compile Include="ViewModel\MeterDLViewModel.cs" />
+    <Compile Include="ViewModel\Server.cs" />
+    <Compile Include="ViewModel\SetViewModel.cs" />
+    <Compile Include="ViewModel\SocketUdpControl.cs" />
+    <Compile Include="View\电表详情界面.xaml.cs">
+      <DependentUpon>电表详情界面.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\主程序报文界面.xaml.cs">
+      <DependentUpon>主程序报文界面.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\电表信息界面.xaml.cs">
+      <DependentUpon>电表信息界面.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\终端报文界面.xaml.cs">
+      <DependentUpon>终端报文界面.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\设置界面.xaml.cs">
+      <DependentUpon>设置界面.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Assets\Controls\MeterData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Styles\ButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Styles\ComboboxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Styles\DataGridStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Styles\ScrollBarStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Styles\ScrollViewerStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Styles\TabControlStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Assets\Controls\GWindow.cs" />
+    <Compile Include="Assets\Controls\ImageButton.cs" />
+    <Compile Include="Assets\Controls\RadioImageButton.cs" />
+    <Compile Include="Base\CommandBase.cs" />
+    <Compile Include="Base\NotifyPropertyBase.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\电表详情界面.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\主程序报文界面.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\电表信息界面.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\终端报文界面.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\设置界面.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="智能电表.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Max.png" />
+    <Resource Include="Assets\Images\Min.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\png-0017.png" />
+    <Resource Include="Assets\Images\png-0216.png" />
+    <Resource Include="Assets\Images\png-0280.png" />
+    <Resource Include="Assets\Images\png-1427.png" />
+    <Resource Include="Assets\Images\png-1431.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\智能电表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Reduction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\智能电表.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\钉子2.png" />
+    <Resource Include="Assets\Images\钉子3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\LYZD.TerminalProtocol\LYZD.TerminalProtocol.csproj">
+      <Project>{2b05e7bf-f5a5-4c3d-bb92-30d3682a2b53}</Project>
+      <Name>LYZD.TerminalProtocol</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

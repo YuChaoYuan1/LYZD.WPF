@@ -1,0 +1,76 @@
+﻿<Window x:Class="LYZD.TransferToPlatform.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LYZD.TransferToPlatform"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="LY-台体转接" Height="800" Width="1280">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="780" Margin="0,0,0,0" VerticalAlignment="Top" Width="1270">
+            <TabItem Header="设备控制">
+                <Grid Background="#FFE5E5E5">
+                    <RichTextBox Name="DevLogRichTxt" HorizontalAlignment="Left" Height="745" Margin="3,0,0,0" VerticalAlignment="Top" Width="1260">
+
+                    </RichTextBox>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="终端通讯信息">
+                <Grid Background="#FFE5E5E5">
+                    <RichTextBox Name="TerLogRichTxt" HorizontalAlignment="Left" Height="745" Margin="3,0,0,0" VerticalAlignment="Top" Width="1260">
+
+                    </RichTextBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="与台体通讯">
+                <Grid Background="#FFE5E5E5">
+                    <RichTextBox Name="OrderLogRichTxt" HorizontalAlignment="Left" Height="745" Margin="3,0,0,0" VerticalAlignment="Top" Width="1260">
+
+                    </RichTextBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="表位控制">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="109*"/>
+                        <ColumnDefinition Width="1155*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="打开继电器" Margin="48.75,10,963,715" Click="Button_Click" Grid.Column="1"/>
+                    <Button Content="关闭继电器" Margin="232.75,10,779,715" Click="Button_Click_1" Grid.Column="1"/>
+                    <TextBox HorizontalAlignment="Left" Name="JDQBW" Height="28" Margin="10,10,0,0" TextWrapping="Wrap" Text="表位数字" VerticalAlignment="Top" Width="118" Grid.ColumnSpan="2"/>
+                    <Button Content="打开全部继电器" Margin="424.75,10,587,715" Click="Button_Click_2" Grid.Column="1" />
+                    <Button Content="关闭全部继电器" Margin="604.75,10,407,715" Click="Button_Click_3" Grid.Column="1" />
+                    <Button Content="打开指定端口" Margin="48.75,60,963,665" Click="Button_Click_6" Grid.Column="1"/>
+                    <Button Content="关闭指定端口" Margin="232.75,60,779,665" Click="Button_Click_7" Grid.Column="1"/>
+                    <Button Content="打开全部端口" Margin="424.75,60,587,665" Click="Button_Click_4" Grid.Column="1"/>
+                    <Button Content="关闭全部端口" Margin="604.75,60,407,665" Click="Button_Click_5" Grid.Column="1"/>
+
+                    <Button Content="专变III型22版" Margin="48.75,141,963,584" Click="Button_Click_8" Grid.Column="1"/>
+                    <Button Content="集中器I型22版" Margin="604.75,141,407,584" Click="Button_Click_9" Grid.Column="1" RenderTransformOrigin="0.501,0.5" />
+                    <Button Content="专变III型13版" Margin="424.75,141,587,584" Click="Button_Click_10" Grid.Column="1" />
+                    <Button Content="集中器I型13版" Margin="232.75,141,779,584" Click="Button_Click_11" Grid.Column="1" />
+                    <Button Content="融合终端" Margin="787.75,141,224,584" Click="Button_Click_12" Grid.Column="1" />
+                    <Button Content="能源控制器" Margin="967.75,141,44,584" Click="Button_Click_13" Grid.Column="1" />
+                    <Label Content="切换检测终端类型:" HorizontalAlignment="Left" Margin="10,144,0,0" VerticalAlignment="Top" Width="118" Grid.ColumnSpan="2"/>
+                    <Button Content="设置遥信" Margin="787.75,10,224,715" Click="Button_Click_14" Grid.Column="1" />
+                    <TextBlock Text="设置遥信示例：1;2;3;4 " Margin="967.75,10,224,715" ></TextBlock>
+                    <Button Content="保存日志" Margin="48.75,211,963,514" Click="Button_Click_15" Grid.Column="1"/>
+                    <Button Content="4852切换到232" Margin="233,211,779,514"  Grid.Column="1" Click="Button_Click_16"/>
+                    <Button Content="232切换到4852" Margin="425,211,587,514"  Grid.Column="1" Click="Button_Click_17"/>
+                    <Label Grid.Column="1" HorizontalAlignment="Left" Margin="946.2,12,0,0"  Content="设置遥信示例：1;2;3;4 " VerticalAlignment="Top" FontSize="16"/>
+                    <Button Content="Can切换50KB" Margin="49,282,963,443"  Grid.Column="1" Click="Button_Click_18"/>
+                    <Button Content="Can切换250KB" Margin="425,282,587,443"  Grid.Column="1" Click="Button_Click_20"/>
+                    <Button Content="Can切换150KB" Margin="233,282,779,443"  Grid.Column="1" Click="Button_Click_19"/>
+                    <Button Content="Can切换500KB" Margin="605,282,407,443"  Grid.Column="1" Click="Button_Click_21"/>
+                    <Button Content="Can切换1MB" Margin="788,282,224,443"  Grid.Column="1" Click="Button_Click_22"/>
+                    <Button Content="切换到4852模式" Margin="49,342,963,383"  Grid.Column="1" Click="Button_Click_24" />
+                    <Button Content="切换到Can模式" Margin="233,342,779,383"  Grid.Column="1" Click="Button_Click_23" />
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+
+    </Grid>
+</Window>
