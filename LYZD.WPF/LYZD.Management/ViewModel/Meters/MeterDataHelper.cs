@@ -86,7 +86,6 @@ namespace LYZD.DataManager.ViewModel.Meters
 
             #endregion
 
-
             for (int i = 0; i < meterResult.Categories.Count; i++)
             {
                 for (int j = 0; j < meterResult.Categories[i].ResultUnits.Count; j++)
@@ -104,9 +103,7 @@ namespace LYZD.DataManager.ViewModel.Meters
                     //这里先排除不是对应协议的部分
                     string RemoveProtocol = "376";  //需要删除的协议
                     if (meterTemp.MD_Protocol_Type == "376.1")
-                    {
                         RemoveProtocol = "698";
-                    }
                     if (names.Contains("分项结论" + RemoveProtocol))
                         names.Remove("分项结论" + RemoveProtocol);
                     if (names.Contains("要检"))
@@ -139,25 +136,18 @@ namespace LYZD.DataManager.ViewModel.Meters
                             {
                                 resultData.Result = "不合格";
                                 meterTemp.MeterResoultData[resultData.ID.Split('_')[0]].Result = "不合格";
-
                             }
                         }
                         else
                         {
-
                             resultData.Datas.Add(names[index], value);
                         }
                     }
                     meterTemp.MeterResoultData[DID].meterResoults.Add(resultData);
-
                 }
             }
-
             return meterTemp;
         }
-
-
-
         #region 淘汰
         ///// <summary>
         ///// 方案参数
@@ -1057,6 +1047,5 @@ namespace LYZD.DataManager.ViewModel.Meters
 
         //#endregion
         #endregion
-
     }
 }

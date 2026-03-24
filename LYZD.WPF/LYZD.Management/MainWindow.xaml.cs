@@ -1142,7 +1142,6 @@ namespace LYZD.DataManager
                 return;
             }
 
-
             List<Core.Model.Meter.TestMeterInfo> temmeter = new List<Core.Model.Meter.TestMeterInfo>();
             foreach (DynamicViewModel meter in meters)
             {
@@ -1154,7 +1153,6 @@ namespace LYZD.DataManager
                     temmeter.Add(temmeter2);
                 }
             }
-
 
             Mis.Common.IMis miss = Mis.MISFactory.Create();
             miss.UpdateInit();
