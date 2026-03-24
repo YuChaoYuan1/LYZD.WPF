@@ -138,7 +138,7 @@ namespace LYZD.DataManager.ViewModel.Meters
                             else
                             {
                                 resultData.Result = "不合格";
-                                meterTemp.MeterResoultData[resultData.ID].Result = "不合格";
+                                meterTemp.MeterResoultData[resultData.ID.Split('_')[0]].Result = "不合格";
 
                             }
                         }
