@@ -46,18 +46,27 @@ bld/
 [Oo]ut/
 
 # ============================================
-# 修复：只忽略运行时生成的日志文件，但保留日志文件夹结构
+# 日志文件夹处理
 # ============================================
-# 忽略所有 .log 文件
+# 忽略所有运行时生成的日志文件
 *.log
 *.ldb
 *.temp
 
-# 忽略日志文件，但保留文件夹结构
+# 忽略通用的 Logs 文件夹，但排除项目必需的 Log 文件夹
 [Ll]og/
 [Ll]ogs/
-!*/[Ll]ogs/.gitkeep
-!*/[Ll]og/.gitkeep
+
+# 强制包含 LYZD.Utility 项目中的 Log 文件夹（必要文件）
+!/LYZD.Utility/Log/
+!LYZD.Utility/Log/**/*
+!/LYZD.ViewModel/Log/
+!LYZD.ViewModel/Log/**/*
+
+# 如果 Log 文件夹中有特定的文件类型需要忽略，可以单独设置
+# 例如忽略运行时日志，但保留配置文件
+/LYZD.Utility/Log/*.log
+/LYZD.Utility/Log/*.ldb
 
 # Build results on 'Bin' directories
 **/[Bb]in/*
