@@ -9,6 +9,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.env
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -21,16 +22,47 @@ mono_crash.*
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
-x64/
-x86/
+
+[Dd]ebug/x64/
+[Dd]ebugPublic/x64/
+[Rr]elease/x64/
+[Rr]eleases/x64/
+bin/x64/
+obj/x64/
+
+[Dd]ebug/x86/
+[Dd]ebugPublic/x86/
+[Rr]elease/x86/
+[Rr]eleases/x86/
+bin/x86/
+obj/x86/
+
 [Ww][Ii][Nn]32/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
+[Aa][Rr][Mm]64[Ee][Cc]/
 bld/
-[Bb]in/
 [Oo]bj/
+[Oo]ut/
+
+# ============================================
+# 修复：只忽略运行时生成的日志文件，但保留日志文件夹结构
+# ============================================
+# 忽略所有 .log 文件
+*.log
+*.ldb
+*.temp
+
+# 忽略日志文件，但保留文件夹结构
 [Ll]og/
 [Ll]ogs/
+!*/[Ll]ogs/.gitkeep
+!*/[Ll]og/.gitkeep
+
+# Build results on 'Bin' directories
+**/[Bb]in/*
+# Uncomment if you have tasks that rely on *.refresh files to move binaries
+#!**/[Bb]in/*.refresh
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -43,11 +75,15 @@ Generated\ Files/
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
+*.trx
 
 # NUnit
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Approval Tests result files
+*.received.*
 
 # Build Results of an ATL Project
 [Dd]ebugPS/
@@ -75,6 +111,7 @@ StyleCopReport.xml
 *.ilk
 *.meta
 *.obj
+*.idb
 *.iobj
 *.pch
 *.pdb
@@ -82,6 +119,8 @@ StyleCopReport.xml
 *.pgc
 *.pgd
 *.rsp
+# but not Directory.Build.rsp, as it configures directory-level build defaults
+!Directory.Build.rsp
 *.sbr
 *.tlb
 *.tli
@@ -89,7 +128,7 @@ StyleCopReport.xml
 *.tmp
 *.tmp_proj
 *_wpftmp.csproj
-*.log
+*.tlog
 *.vspscc
 *.vssscc
 .builds
@@ -152,6 +191,7 @@ coverage*.info
 
 # NCrunch
 _NCrunch_*
+.NCrunch_*
 .*crunch*.local.xml
 nCrunchTemp_*
 
@@ -293,6 +333,14 @@ node_modules/
 # Visual Studio 6 auto-generated workspace file (contains which files were open etc.)
 *.vbw
 
+# Visual Studio 6 workspace and project file (working project files containing files to include in project)
+*.dsw
+*.dsp
+
+# Visual Studio 6 technical files
+*.ncb
+*.aps
+
 # Visual Studio LightSwitch build output
 **/*.HTMLClient/GeneratedArtifacts
 **/*.DesktopClient/GeneratedArtifacts
@@ -302,22 +350,22 @@ node_modules/
 _Pvt_Extensions
 
 # Paket dependency manager
-.paket/paket.exe
+**/.paket/paket.exe
 paket-files/
 
 # FAKE - F# Make
-.fake/
+**/.fake/
 
 # CodeRush personal settings
-.cr/personal
+**/.cr/personal
 
 # Python Tools for Visual Studio (PTVS)
-__pycache__/
+**/__pycache__/
 *.pyc
 
 # Cake - Uncomment if you are using it
-# tools/**
-# !tools/packages.config
+#tools/**
+#!tools/packages.config
 
 # Tabs Studio
 *.tss
@@ -339,15 +387,22 @@ ASALocalRun/
 
 # MSBuild Binary and Structured Log
 *.binlog
+MSBuild_Logs/
+
+# AWS SAM Build and Temporary Artifacts folder
+.aws-sam
 
 # NVidia Nsight GPU debugger configuration file
 *.nvuser
 
 # MFractors (Xamarin productivity tool) working folder
-.mfractor/
+**/.mfractor/
 
 # Local History for Visual Studio
-.localhistory/
+**/.localhistory/
+
+# Visual Studio History (VSHistory) files
+.vshistory/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
@@ -356,57 +411,62 @@ healthchecksdb
 MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
-.ionide/
+**/.ionide/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/Resource/LYTest.*.exe
-/Resource/LYZD.*.exe
-/Resource/LY.*.exe
-/Resource/ZH.*.exe
-/Resource/LYTest.*.dll
-/Resource/LYZD.*.dll
-/Resource/ZH.*.dll
-/Resource/Newtonsoft.Json.dll
-/Resource/Newtonsoft.Json.xml
-/Resource/*.pdb
-/Resource/Devices/
-/Resource/Ini/ConfigTem.ini
-/Resource/Ini/PowerData.ini
-/Resource/Ini/MeterData/*.txt
-/Resource/*/Gurux.*.dll
-/Resource/Gurux.*.dll
-/Resource/Gurux.*.xml
-/Resource/netstandard.dll
-/Resource/ZH.MeterProtocol.dll
-/Resource/System.*.dll
-/Resource/System.*.xml
+
+# VS Code files for those working on multiple tools
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+# Windows Installer files from build outputs
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# ============================================
+# 项目特定规则 - 修复 Resource 文件夹的 DLL 引用问题
+# ============================================
+
+# 忽略所有编译生成的 exe 和 dll
+/Resource/*.exe
 /Resource/*.dll
-/Resource/*.exe.config
-/Resource/initialize.exe
-/Resource/LYbackup.exe
-/installation
-/Resource/TerminalInitialization.exe
-/Resource/DatabaseInitialized.exe
 
-/Resource/Res/Excel/*
-/Resource/Skin/*.xaml.bak
-
-/Resource/LYTest.WordTemplate.xml
-/Resource/log4net.xml
-/Resource/CLDC.CLAT.Comm.Utility.xml
-/Resource/CLDC.CLAT.Comm.InternalContract.xml
-/Resource/CLDC.CLAT.Comm.InternalCommClient.xml
-/Resource/Microsoft.Expression.Interactions.xml
-/Resource/Xml/DataFlag - 副本.xml
-/Resource/Res/Word/Report
-
+# 但排除（保留）项目必需的 DLL 文件
+!/Resource/Gurux.*.dll
+!/Resource/Newtonsoft.Json.dll
+!/Resource/ZH.MeterProtocol.dll
 !/Resource/Interop.OALib.dll
 !/Resource/AxInterop.OALib.dll
-!/Resource/LYTest.WordTemplate.exe
-/Resource/CLDC.CLAT.Comm.ConfigManager.xml
-/Resource/CLDC.CLAT.Comm.IConfigManager.xml
-/Resource/CLDC.CLAT.Comm.IRouteInfoManager.xml
-*.temp
+
+# 忽略配置文件备份
+/Resource/Ini/ConfigTem.ini
+/Resource/Ini/PowerData.ini
+
+# 忽略 Excel 临时文件和输出文件
+/Resource/Res/Excel/*.xlsx
+/Resource/Res/Excel/*.xls
+
+
+# 忽略所有 .bak 备份文件
+*.bak
+
+# 忽略 Visual Studio 临时文件
+*.vshost.exe
 *.vshost.exe.manifest
+
+# 忽略运行时生成的数据库锁文件
 *.ldb

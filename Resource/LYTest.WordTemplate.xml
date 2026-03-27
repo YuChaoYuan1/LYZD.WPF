@@ -1,0 +1,38 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+LYTest.WordTemplate
+</name>
+</assembly>
+<members>
+<member name="T:LYTest.WordTemplate.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:LYTest.WordTemplate.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:LYTest.WordTemplate.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="F:LYTest.WordTemplate.AccessHelper.connString">
+ <summary>
+ 数据库连接字符串
+ </summary>
+</member>
+<member name="M:LYTest.WordTemplate.Form1.TreeView1_AfterSelect(System.Object,System.Windows.Forms.TreeViewEventArgs)">
+ <summary>
+ 选中节点
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+</members>
+</doc>

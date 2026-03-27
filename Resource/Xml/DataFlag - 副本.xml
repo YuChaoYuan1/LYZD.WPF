@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataFlagInfo>
+  <R DataFlagName="日时段表数" DataFlag="04000202" DataLength="1" DataSmallNumber="0" DataFormat="NN" Default="02" />
+  <R DataFlagName="跳闸延时时间" DataFlag="04001401" DataLength="2" DataSmallNumber="0" DataFormat="NNNN" Default="0002" />
+  <R DataFlagName="年时区数" DataFlag="04000201" DataLength="1" DataSmallNumber="0" DataFormat="NN" Default="02" />
+  <R DataFlagName="日时段数" DataFlag="04000203" DataLength="1" DataSmallNumber="0" DataFormat="NN" Default="08" />
+  <R DataFlagName="费率数" DataFlag="04000204" DataLength="1" DataSmallNumber="0" DataFormat="NN" Default="04" />
+  <R DataFlagName="第一套时区表" DataFlag="04010000" DataLength="6" DataSmallNumber="0" DataFormat="NNNNNNNNNNNN" Default="122801062202" />
+  <R DataFlagName="第一套第1日时段表" DataFlag="04010001" DataLength="9" DataSmallNumber="0" DataFormat="NNNNNNNNNNNNNNNNNN" Default="000001080002160003" />
+  <R DataFlagName="第一套第2日时段表" DataFlag="04010002" DataLength="12" DataSmallNumber="0" DataFormat="NNNNNNNNNNNNNNNNNN" Default="000001060002120003180004" />
+  <R DataFlagName="每月第1结算日" DataFlag="04000B01" DataLength="2" DataSmallNumber="0" DataFormat="NNNN" Default="0100" />
+  <R DataFlagName="两套日时段表切换时间" DataFlag="04000107" DataLength="5" DataSmallNumber="0" DataFormat="YYMMDDhhmm" Default="1601011200" />
+  <R DataFlagName="囤积金额限值" DataFlag="04001004" DataLength="4" DataSmallNumber="2" DataFormat="XXXXXXXX" Default="00000000" />
+  <R DataFlagName="合闸允许金额限值" DataFlag="04001005" DataLength="4" DataSmallNumber="2" DataFormat="XXXXXXXX" Default="00000000" />
+  <R DataFlagName="透支金额限值" DataFlag="04001003" DataLength="4" DataSmallNumber="2" DataFormat="XXXXXXXX" Default="00000000" />
+  <R DataFlagName="备用套阶梯时区表" DataFlag="04070001" DataLength="12" DataSmallNumber="0" DataFormat="NNNNNNNNNNNN" Default="010101050102110102110102" />
+  <R DataFlagName="两套阶梯时区切换时间" DataFlag="0400010A" DataLength="5" DataSmallNumber="0" DataFormat="YYMMDDhhmm" Default="1601011200" />
+  <R DataFlagName="日期时间" DataFlag="04000101" DataLength="7" DataSmallNumber="0" DataFormat="YYMMDDWWHHMMSS" Default="16010105120000" />
+  <R DataFlagName="其他" DataFlag="" DataLength="" DataSmallNumber="0" DataFormat="" Default="" />
+  <R DataFlagName="" DataFlag="" DataLength="" DataSmallNumber="" DataFormat="" Default="" />
+</DataFlagInfo>

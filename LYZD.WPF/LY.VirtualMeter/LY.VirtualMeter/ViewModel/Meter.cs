@@ -1018,7 +1018,7 @@ namespace LY.VirtualMeter.ViewModel
                 //string strbu1 = null;
                 //string strbu2 = null;
 
-                byte[] data = ASCIIEncoding.ASCII.GetBytes(1 + "|" + 1 + "|" + strEsam + "|" + sRand + "|" + sTmp1 + "|" + strbu1.ToString() + "|" + strbu2.ToString());
+                byte[] data = ASCIIEncoding.ASCII.GetBytes(0 + "|" + 1 + "|" + strEsam + "|" + sRand + "|" + sTmp1 + "|" + strbu1.ToString() + "|" + strbu2.ToString());
 
                 int ret = 0;
 
@@ -1063,7 +1063,6 @@ namespace LY.VirtualMeter.ViewModel
             {
                 UdpClient Macserver = new UdpClient();
                 Macserver.Send(data, data.Length, IPRemotePoint);//将数据发送到指定的终结点
-                
                 byte[] BytReceived = new byte[0];
                 bool IsReveive = false;     //标志是否返回
                 List<byte> RevItems = new List<byte>();     //接收的数据集合
@@ -1108,7 +1107,7 @@ namespace LY.VirtualMeter.ViewModel
                     BackData = RevItems.ToArray();
                 }
                 Macserver.Close();
-                
+
                 if (BackData.Length > 0)
                 {
                     MAC = Encoding.ASCII.GetString(BackData, 0, BackData.Length);
@@ -1120,16 +1119,6 @@ namespace LY.VirtualMeter.ViewModel
                 //LogInfoHelper.WriteLog("Meter5", ex.Message + "\r\n" + ex.ToString() + "\r\n" + "RetMac()");
                 return "12345678";
             }
-
-
-            ////Console.WriteLine(Encoding.ASCII.GetString(data, 0, data.Length));
-
-
-            //if (BackData.Length > 0)
-            //{
-            //    MAC = Encoding.ASCII.GetString(BackData, 0, BackData.Length);
-            //}
-
         }
 
         private long TimeSub(DateTime Time1, DateTime Time2)
