@@ -235,7 +235,6 @@ namespace LYZD.Verify.AccurateTest
 
         }
 
-
         public string SetWuCha(float[] data, ErrorLimit limit)
         {
             float avgWC = Number.GetAvgA(data);

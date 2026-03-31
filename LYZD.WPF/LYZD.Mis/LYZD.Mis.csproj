@@ -38,7 +38,13 @@
     <Reference Include="MySql.Data">
       <HintPath>..\..\Resource\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=13.0.1.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\LY_Terminal_Code_OfficialVersion\LY_Terminal_Code_OfficialVersion\Resource\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Bson">
+      <HintPath>D:\LY_Terminal_Code_OfficialVersion\LY_Terminal_Code_OfficialVersion\Resource\Newtonsoft.Json.Bson.dll</HintPath>
+    </Reference>
     <Reference Include="Oracle.ManagedDataAccess">
       <HintPath>..\..\Resource\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
@@ -107,6 +113,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="LYDispatchingSystem\" />
+    <Folder Include="MisData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LYDataServer\ServiceInterface.dll" />
+    <Content Include="LYDataServer\ServiceInterface.xml" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\LYZD.Core\LYZD.Core.csproj">
       <Project>{830309E8-432D-437A-9F3E-D7A8925D09B8}</Project>
       <Name>LYZD.Core</Name>
@@ -116,21 +130,9 @@
       <Name>LYZD.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\LYZD.Utility\LYZD.Utility.csproj">
-      <Project>{b51cd3e2-0663-4a0d-af36-b16ed291f033}</Project>
+      <Project>{B51CD3E2-0663-4A0D-AF36-B16ED291F033}</Project>
       <Name>LYZD.Utility</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ZH.MeterProtocol\ZH.MeterProtocol.csproj">
-      <Project>{D2741FCF-183D-4581-AFE8-2DF869B4246A}</Project>
-      <Name>ZH.MeterProtocol</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="LYDispatchingSystem\" />
-    <Folder Include="MisData\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="LYDataServer\ServiceInterface.dll" />
-    <Content Include="LYDataServer\ServiceInterface.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

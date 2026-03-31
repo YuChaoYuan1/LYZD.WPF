@@ -174,7 +174,10 @@ namespace LYZD.WPF
         static string LogFile ;
         public static void Log(string message)
         {
-            System.IO.File.AppendAllText(LogFile, message + "\r\n");
+            try{
+                System.IO.File.AppendAllText(LogFile, message + "\r\n");
+            }
+            catch { }
         }
 
         private void Timer_Tick(object sender, EventArgs e)

@@ -1,20 +1,10 @@
-﻿using LYZD.Core.Enum;
-using LYZD.Core.Helper;
-using LYZD.Core.Model.DnbModel.DnbInfo;
-using LYZD.Core.Model.Meter;
+﻿using LYZD.Core.Model.Meter;
 using LYZD.Core.Model.Schema;
-using LYZD.DAL.Config;
 using LYZD.Mis.Common;
-using LYZD.Mis.MDS.Table;
 using LYZD.Mis.NanRui.LRDataTable;
-using LYZD.Utility.Log;
 using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using ZH.MeterProtocol;
 
 namespace LYZD.Mis.Houda
 {

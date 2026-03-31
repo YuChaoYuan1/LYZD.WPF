@@ -125,10 +125,30 @@ namespace LYZD.SocketComm
                 listenThread.Start();
                 IsListened = true;
 
-                //ExecuteMessageChanged?.Invoke(this, $"本地终端：{ServerSocket.LocalEndPoint}");
-                //ExecuteMessageChanged?.Invoke(this, $"协议：{ServerSocket.LocalEndPoint.AddressFamily}");
-                //ExecuteMessageChanged?.Invoke(this, $"准备完成，开始侦听客户端连接...");
-
+                //监听线程安全
+                Thread monitorThread = new Thread(() =>
+                {
+                    while (IsListened)  // 循环检测直到服务停止
+                    {
+                        try
+                        {
+                            // 执行检测
+                            SocketStart();
+                            // 等待指定时间后再次检测
+                            Thread.Sleep(3 * 1000);
+                        }
+                        catch (ThreadAbortException)
+                        {
+                            break;
+                        }
+                        catch (Exception ex)
+                        {
+                            ExecuteMessageChanged?.Invoke(this, $"连接监控异常：{ex.Message}");
+                         
+                        }
+                    }
+                });
+                monitorThread.Start();
             }
             catch (Exception ex)
             {
@@ -321,5 +341,74 @@ namespace LYZD.SocketComm
             }
             return retStr;
         }
+
+
+        public void SocketStart()
+        {
+            List<Socket> socketsToCheck = null;
+
+            // 线程安全地获取Socket列表副本
+            lock (ClientSocketList)
+            {
+                socketsToCheck = ClientSocketList.ToList();
+            }
+
+            foreach (Socket socket in socketsToCheck)
+            {
+                try
+                {
+                    if (!IsConnectedBySend(socket))
+                    {
+                        string remoteEndPoint = socket.RemoteEndPoint?.ToString();
+                        if (!string.IsNullOrEmpty(remoteEndPoint))
+                        {
+                            // 触发断开事件
+                            ClientCountChanged?.Invoke("Remove", remoteEndPoint);
+                            ExecuteMessageChanged?.Invoke(this, $"检测到客户端【{remoteEndPoint}】已断开");
+
+                            // 从列表中移除
+                            lock (ClientSocketList)
+                            {
+                                ClientSocketList.Remove(socket);
+                                ClientIpPortList.Remove(remoteEndPoint);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ExecuteMessageChanged?.Invoke(this, $"检测客户端异常：{ex.Message}");
+                }
+            }
+        }
+
+        public bool IsConnectedBySend(Socket socket)
+        {
+            if (socket == null) return false;
+
+            if (socket == null || !socket.Connected) return false;
+
+            try
+            {
+                // 使用同步方法（最简单可靠）
+                socket.Send(new byte[0], 0, SocketFlags.None);
+                return true;
+            }
+            catch (SocketException ex)
+            {
+                if (ex.SocketErrorCode == SocketError.ConnectionReset ||
+                    ex.SocketErrorCode == SocketError.ConnectionAborted ||
+                    ex.SocketErrorCode == SocketError.Shutdown)
+                {
+                    return false;
+                }
+                return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
     }
 }

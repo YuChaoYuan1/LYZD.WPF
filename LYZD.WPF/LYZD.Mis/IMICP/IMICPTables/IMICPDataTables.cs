@@ -1,23 +1,20 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LYZD.Mis.IMICP.IMICPTables
 {
-  
 
-        #region 6.1
-        public class SXDataTableSend
+
+    #region 6.1
+    public class SXDataTableSend
         {
 
             /// <summary>
             /// 条形码
             /// </summary>
             /// 
-            [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+            [Newtonsoft.Json.JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
             public string barCode { get; set; }
 
 

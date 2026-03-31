@@ -952,9 +952,14 @@ namespace LYZD.ViewModel.Device
         /// </summary>
         public void RefStd()
         {
-            int value = ConfigHelper.Instance.Std_RedInterval;
+
+           int value = ConfigHelper.Instance.Std_RedInterval;
             while (true)
             {
+
+               // LogManager.AddMessage("--------------------------------------------", EnumLogSource.设备操作日志, EnumLevel.Error);
+
+
                 if (EquipmentData.ApplicationIsOver == true) break;
                 try
                 {
@@ -962,7 +967,7 @@ namespace LYZD.ViewModel.Device
                     float[] floatArray = Readstd();
                     if (floatArray.Count(a=>a==0)== floatArray.Length)  //全部都为0
                     {
-
+                   //  LogManager.AddMessage("0000000000000000000000000000000000000000s", EnumLogSource.设备操作日志, EnumLevel.Error);
                     }
                     if (floatArray != null && floatArray.Length > 28)
                     {
@@ -1004,10 +1009,10 @@ namespace LYZD.ViewModel.Device
                         EquipmentData.StdInfo.Sc = floatArray[25];
 
 
-                        EquipmentData.StdInfo.Freq = floatArray[12];
-                        EquipmentData.StdInfo.P = floatArray[26];
-                        EquipmentData.StdInfo.Q = floatArray[27];
-                        EquipmentData.StdInfo.S = floatArray[28];
+                        //EquipmentData.StdInfo.Freq = floatArray[12];
+                        //EquipmentData.StdInfo.P = floatArray[26];
+                        //EquipmentData.StdInfo.Q = floatArray[27];
+                        //EquipmentData.StdInfo.S = floatArray[28];
                     }
                     else
                     {
