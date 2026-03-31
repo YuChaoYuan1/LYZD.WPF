@@ -125,30 +125,30 @@ namespace LYZD.SocketComm
                 listenThread.Start();
                 IsListened = true;
 
+
                 //监听线程安全
-                Thread monitorThread = new Thread(() =>
-                {
-                    while (IsListened)  // 循环检测直到服务停止
-                    {
-                        try
-                        {
-                            // 执行检测
-                            SocketStart();
-                            // 等待指定时间后再次检测
-                            Thread.Sleep(3 * 1000);
-                        }
-                        catch (ThreadAbortException)
-                        {
-                            break;
-                        }
-                        catch (Exception ex)
-                        {
-                            ExecuteMessageChanged?.Invoke(this, $"连接监控异常：{ex.Message}");
-                         
-                        }
-                    }
-                });
-                monitorThread.Start();
+                //Thread monitorThread = new Thread(() =>
+                //{
+                //    while (IsListened)  // 循环检测直到服务停止
+                //    {
+                //        try
+                //        {
+                //            // 执行检测
+                //            SocketStart();
+                //            // 等待指定时间后再次检测
+                //            Thread.Sleep(3 * 1000);
+                //        }
+                //        catch (ThreadAbortException)
+                //        {
+                //            break;
+                //        }
+                //        catch (Exception ex)
+                //        {
+                //            ExecuteMessageChanged?.Invoke(this, $"连接监控异常：{ex.Message}");
+                //        }
+                //    }
+                //});
+                //monitorThread.Start();
             }
             catch (Exception ex)
             {
@@ -257,7 +257,7 @@ namespace LYZD.SocketComm
                     {
                         Stream = new NetworkStream(socket);
                         Stream.Write(dataBytes, 0, dataBytes.Length);
-                        ExecuteMessageChanged?.Invoke(this, $"发送数据长度：{dataBytes.Length}");
+                       // ExecuteMessageChanged?.Invoke(this, $"发送数据长度：{dataBytes.Length}");
                     }
                     else
                     {
@@ -284,7 +284,7 @@ namespace LYZD.SocketComm
                         string dataToSend = data;
                         byte[] dataBytes = Encoding.UTF8.GetBytes(dataToSend);
                         Stream.Write(dataBytes, 0, dataBytes.Length);
-                        ExecuteMessageChanged?.Invoke(this, $"发送数据长度：{dataBytes.Length}");
+                        //ExecuteMessageChanged?.Invoke(this, $"发送数据长度：{dataBytes.Length}");
                     }
                     else
                     {
@@ -292,7 +292,7 @@ namespace LYZD.SocketComm
                         string dataToSend = data;
                         byte[] dataBytes = Encoding.UTF8.GetBytes(dataToSend);
                         Stream.Write(dataBytes, 0, dataBytes.Length);
-                        ExecuteMessageChanged?.Invoke(this, $"发送数据长度：{dataBytes.Length}");
+                        //ExecuteMessageChanged?.Invoke(this, $"发送数据长度：{dataBytes.Length}");
                     }
                 }
             }
@@ -318,7 +318,7 @@ namespace LYZD.SocketComm
                         Stream.Write(dataBytes, 0, dataBytes.Length);
                         ExecuteMessageChanged.Invoke(this, $"发送到终端：{socket.RemoteEndPoint}");
                         ExecuteMessageChanged.Invoke(this, $"协议版本：{socket.RemoteEndPoint.AddressFamily}");
-                        ExecuteMessageChanged.Invoke(this, $"发送数据长度：{dataBytes.Length}");
+                        //ExecuteMessageChanged.Invoke(this, $"发送数据长度：{dataBytes.Length}");
                     }
                 }
             }

@@ -1691,7 +1691,7 @@ namespace LYZD.ViewModel.CheckController
                 Utility.Log.LogManager.AddMessage(sender as string + "->" + e, Utility.Log.EnumLogSource.检定业务日志, Utility.Log.EnumLevel.Information);
                 if (sender as string == "Remove")
                 {
-                    if (!EquipmentData.TerminalIndexEthernetAddress.ContainsKey(e))
+                    if (EquipmentData.TerminalIndexEthernetAddress.ContainsKey(e))
                     {
                         string LogicalAddress = EquipmentData.TerminalIndexEthernetAddress[e];
                         if (EquipmentData.TerminalIndexEthernet.ContainsKey(LogicalAddress))
@@ -1733,7 +1733,8 @@ namespace LYZD.ViewModel.CheckController
                             }
                         }
                     }
-                    else if (EquipmentData.TerminalIndexEthernetAddress.ContainsKey(IP_Port))//检定时处理数据
+
+                    if (EquipmentData.TerminalIndexEthernetAddress.ContainsKey(IP_Port))//检定时处理数据
                     {
                         string address = EquipmentData.TerminalIndexEthernetAddress[IP_Port];
                         int index = EquipmentData.TerminalIndexEthernet[address];
@@ -2193,12 +2194,12 @@ namespace LYZD.ViewModel.CheckController
             return str_StdStatus;
         }
 
-
         /// <summary>
         /// 应用连接
         /// </summary>
         public void ConnectLink(bool bCoonect)
         {
+
             MessageAdd("连接加密机", EnumLogType.提示与流程信息);
             int ret = TerminalProtocol.Encryption.IEncryptionFunction698.ConnectDevice(GetYaoJian(), VerifyConfig.Dog_IP, VerifyConfig.Dog_Prot, VerifyConfig.Dog_Overtime);
             if (ret != 0)//czx0723
@@ -2453,6 +2454,7 @@ namespace LYZD.ViewModel.CheckController
 
             Dog_ConnectTime = DateTime.Now;
             if (bCoonect) AddItemsResoult("建立应用连接", TempData);
+
         }
 
         public void ConnectLink2(bool bCoonect)
