@@ -9,7 +9,7 @@
     xmlns:Converter1="clr-namespace:LYZD.WPF.Converter" 
     xmlns:view="clr-namespace:LYZD.WPF.View" xmlns:Light="clr-namespace:LYZD.WPF.Controls.PilotLamp"
     x:Class="LYZD.WPF.MainWindow"
-              Title="深圳隆元科技有限公司终端检测系统"
+              Title="深圳隆元科技有限公司终端检测"
                  MinHeight= "700"               
                  MinWidth="1280"
                  Height="700"

@@ -726,12 +726,13 @@ namespace LYZD.ViewModel.CheckController
                                     Type485 = "4854";
                                     connType = 2;
                                     break;
+                              
                                 default:
                                     Type485 = "默认4852";
                                     connType = 0;
                                     break;
                             }
-                            LogManager.AddMessage(string.Format($"要检终端类型{item.MD_TerminalType},切换到{Type485}通道"), EnumLogSource.检定业务日志, EnumLevel.Error);
+                            //LogManager.AddMessage(string.Format($"要检终端类型{item.MD_TerminalType},切换到{Type485}通道"), EnumLogSource.检定业务日志, EnumLevel.Error);
                             break;
                         }
                     }
@@ -799,6 +800,9 @@ namespace LYZD.ViewModel.CheckController
                                 type = 5;
                                 break;
                             case "能源控制器":
+                                type = 6;
+                                break;
+                            case "能源控制器1":
                                 type = 6;
                                 break;
                             default:
