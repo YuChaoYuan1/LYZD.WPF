@@ -1450,9 +1450,6 @@ namespace LYZD.ViewModel.InputPara
 
                         }
                     }
-
-                    Meters[i].SetProperty("MD_UB", testMeter.MD_UB.ToString()); //电压
-                    Meters[i].SetProperty("MD_UA", testMeter.MD_UA); //电流
                 }
                 LogManager.AddMessage("下载电表信息完成正在录入到本地", EnumLogSource.服务器日志, EnumLevel.Information);
 
@@ -1517,7 +1514,6 @@ namespace LYZD.ViewModel.InputPara
                         });
                         nodeTemp.SaveCode();
                     }
-
                 }
             }
         }

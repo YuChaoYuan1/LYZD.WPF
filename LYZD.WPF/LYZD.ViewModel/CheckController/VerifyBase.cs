@@ -3921,7 +3921,6 @@ namespace LYZD.ViewModel.CheckController
                         resoult[pos] = DeviceControl.StopWcb(ControlType, (byte)(pos + 1), ID);
                     }
                 }
-
             };
             DeviceThreadManager.Instance.Start();
             WaitWorkDone();
@@ -3940,7 +3939,6 @@ namespace LYZD.ViewModel.CheckController
                 return false;
             }
             return true;
-
         }
 
         /// <summary>
